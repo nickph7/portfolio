@@ -6,6 +6,11 @@
 */
 module.exports = {
   theme: {
+    fontFamily: {
+      acumin: ['acumin-pro', 'sans-serif'],
+      acuminCondensed: ['acumin-pro-condensed', 'sans-serif'],
+      acuminXcondensed: ['acumin-pro-extra-condensed', 'sans-serif']
+    },
     extend: {
       colors: {
         mdarkone: '#181616',

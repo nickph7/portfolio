@@ -2,7 +2,7 @@
   <div class="min-h-screen content h-auto mb-10">
     <navbar />
     <main class="main-container relative">
-      <div id="sidebar" class="sidebar-wrapper">
+      <div id="sidebar" class="sidebar-wrapper hidden">
         <div class="sidebar">
           <ul>
             <li class="sidebar-link">

@@ -10,7 +10,10 @@ export default {
   props: {
     onClick: {
       type: Function,
-      required: true
+      required: false,
+      default () {
+
+      }
     }
   }
 }

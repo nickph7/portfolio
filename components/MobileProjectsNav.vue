@@ -1,9 +1,22 @@
 <template>
-  <div class="bottom-bar bg-blue-300">
-    <MButton :on-click="toggleSidebar">
+  <div class="bottom-bar bg-mdarktwo w-full flex items-center">
+    <MButton :on-click="toggleSidebar" class="sidebar-button">
       <i class="icon-up-dir" />
     </MButton>
-    <slot>Put your links here</slot>
+    <div class="inline-flex justify-between flex-grow mx-2">
+      <div>
+        <nuxt-link v-if="hasPrev" :to="prev.link ? prev.link : '/'">
+          <i class="icon-left tiny-arrow" />
+          <span class="font-acuminCondensed uppercase text-mwhite">{{ prev.title }}</span>
+        </nuxt-link>
+      </div>
+      <div>
+        <nuxt-link v-if="hasNext" :to="next.link ? next.link : '/'">
+          <span class="font-acuminCondensed uppercase text-mwhite">{{ next.title }}</span>
+          <i class="icon-right tiny-arrow" />
+        </nuxt-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -14,9 +27,27 @@ export default {
   components: {
     MButton
   },
+  props: {
+    prev: {
+      type: Object,
+      default () { return {} }
+    },
+    next: {
+      type: Object,
+      default () { return {} }
+    }
+  },
   data () {
     return {
       sidebarIsToggled: false
+    }
+  },
+  computed: {
+    hasNext () {
+      return Object.keys(this.next).length
+    },
+    hasPrev () {
+      return Object.keys(this.prev).length
     }
   },
   beforeDestroy () {
@@ -34,9 +65,21 @@ export default {
 </script>
 
 <style scoped lang="postcss">
+  .bottom-bar{
+    position: sticky;
+    bottom: -1px;
+    border-top: 1px solid var(--mdarkthree);
+    z-index: 10;
+  }
 
-.bottom-bar{
-  position: sticky;
-  bottom: 0;
-}
+  .sidebar-button{
+    width: 47px;
+    height: 47px;
+    border-right: 1px solid var(--mdarkthree);
+  }
+
+  .tiny-arrow{
+    @apply text-xs bg-mwhite rounded-sm mr-1;
+    padding: 1px 0;
+  }
 </style>
