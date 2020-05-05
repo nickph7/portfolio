@@ -1,15 +1,24 @@
 <template>
   <div>
     <navbar />
-    <nuxt />
+    <nuxt class="main-container" />
   </div>
 </template>
 
-<style>
-</style>
 <script>
-import Navbar from '~/components/NavBar'
+import Navbar from '@/components/NavBar'
 export default {
   components: { Navbar }
 }
 </script>
+
+<style>
+/* Default global style*/
+  .main-container{
+    margin-top: var(--nav-height-mob);
+  }
+</style>
+
+<style scoped>
+
+</style>

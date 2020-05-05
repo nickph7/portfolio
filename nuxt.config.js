@@ -12,7 +12,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.typekit.net/frb6tpn.css' }
     ]
   },
   /*
@@ -23,11 +24,16 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/css/falaeco_webfont.css',
+    '~/assets/css/animation.css',
+    '~/assets/css/base.css',
+    '~/assets/css/typography.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/vue-awesome-swiper', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules

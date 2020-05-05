@@ -1,10 +1,11 @@
 <template>
-  <h1 class="NuxtLogo">FALAECO</h1>
+  <h1 class="NuxtLogo">
+    FALAECO
+  </h1>
 </template>
 <style>
 .NuxtLogo {
   animation: 1s appear;
-  margin: auto;
 }
 
 @keyframes appear {

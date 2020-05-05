@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <h1>This is the index page</h1>
+    <div class="bg-blue-400 w-full h-64">
+      Hero
+    </div>
+    <div class="homepage-presentation">
+      <h1>Hi I'm Nick Prud'homme</h1>
+      <h2>Falaeco is just my artist name by the way.</h2>
+    </div>
   </div>
 </template>
 

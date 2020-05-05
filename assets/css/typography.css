@@ -1,0 +1,36 @@
+.title, .content-link, .nav-link, .gallery-desc{
+  color: #f7f3f3;
+}
+
+.title{
+  font-family: acumin-pro-condensed, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.06rem;
+  line-height: 1;
+}
+.subtitle{
+  font-family: acumin-pro-condensed, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #c4c2c2;
+  letter-spacing: 0.05rem;
+}
+.text{
+  font-family: acumin-pro, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #dcdada
+}
+.content-link {
+  font-family: acumin-pro-condensed, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.nav-link {
+  font-family: acumin-pro-extra-condensed, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+}
