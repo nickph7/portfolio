@@ -78,6 +78,7 @@ export default {
 <style scoped>
   .gallery-wrapper {
     width: 100%;
+    /* min-width: 0; */
   }
 
   .gallery{

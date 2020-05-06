@@ -4,7 +4,7 @@
     <main class="main-container relative w-full">
       <responsive-sidebar />
       <div class="flex w-full">
-        <div class="content">
+        <div class="content" style="min-width: 0 !important;">
           <nuxt />
         </div>
       </div>

@@ -6,6 +6,7 @@
     <div class="homepage-presentation">
       <h1>Hi I'm Nick Prud'homme</h1>
       <h2>Falaeco is just my artist name by the way.</h2>
+      <h3>Test</h3>
     </div>
   </div>
 </template>
