@@ -69,7 +69,7 @@ export default {
     position: sticky;
     bottom: -1px;
     border-top: 1px solid var(--mdarkthree);
-    z-index: 10;
+    z-index: 30;
   }
 
   .sidebar-button{

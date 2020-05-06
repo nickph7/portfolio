@@ -1,0 +1,4 @@
+.tiny-arrow{
+  @apply text-xs bg-mwhite rounded-sm mr-1;
+  padding: 1px 0;
+}

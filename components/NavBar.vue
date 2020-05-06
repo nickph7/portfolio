@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-wrapper flex items-center w-full fixed top-0 left-0 bg-mdarktwo text-mwhite z-10">
+  <div class="nav-wrapper flex items-center w-full fixed top-0 left-0 bg-mdarktwo text-mwhite z-30">
     <nav class="nav-main w-full flex flex-row justify-between px-8 max-w-screen-xl mx-auto">
       <nuxt-link to="/">
         <logo />

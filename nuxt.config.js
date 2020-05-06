@@ -26,7 +26,7 @@ export default {
   css: [
     '~/assets/css/falaeco_webfont.css',
     '~/assets/css/animation.css',
-    '~/assets/css/base.css',
+    '~/assets/css/mystyle.css',
     '~/assets/css/typography.css'
   ],
   /*

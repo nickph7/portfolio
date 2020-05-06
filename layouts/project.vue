@@ -1,28 +1,10 @@
 <template>
   <div class="min-h-screen h-auto mb-10">
     <navbar />
-    <main class="main-container relative w-full">
+    <main class="main-container flex relative w-full">
       <responsive-sidebar />
-      <div class="flex w-full">
-        <div class="sidebar-wrapper self-stretch bg-purple-300">
-          <div class="sidebar hidden lg:block bg-green-500 uppercase text-center text-xl">
-            <ul class="content-link">
-              <li class="sidebar--link">
-                <nuxt-link to="/projects/equilibria">
-                  Equilibria
-                </nuxt-link>
-              </li>
-              <li class="sidebar--link">
-                <nuxt-link to="/projects/machine-for-birds">
-                  Machine For Birds
-                </nuxt-link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="content" style="min-width: 0 !important;">
-          <nuxt />
-        </div>
+      <div class="content" style="min-width: 0 !important;">
+        <nuxt />
       </div>
     </main>
     <m-footer />
@@ -47,6 +29,7 @@ export default {
 <style scoped lang="postcss">
 @media screen and (min-width: 1024px) {
     .sidebar-wrapper{
+      @apply self-stretch bg-purple-500;
       width: 30%;
     }
 
