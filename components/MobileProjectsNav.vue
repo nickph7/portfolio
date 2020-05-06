@@ -1,5 +1,5 @@
 <template>
-  <div class="bottom-bar bg-mdarktwo w-full flex items-center">
+  <div class="bottom-bar bg-mdarktwo w-full flex items-center lg:hidden">
     <MButton :on-click="toggleSidebar" class="sidebar-button">
       <i class="icon-up-dir" />
     </MButton>

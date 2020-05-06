@@ -82,7 +82,7 @@ export default {
   }
 
   .gallery{
-    max-height: 85vh;
+    height: 85vh;
   }
 
   .gallery-slide {
