@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style>
-/* Default global style*/
+/* TODO: Better strategy for defining global style */
   .main-container{
     margin-top: var(--nav-height-mob);
   }

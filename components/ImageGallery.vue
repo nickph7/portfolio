@@ -79,6 +79,11 @@ export default {
   .gallery-wrapper {
     width: 100%;
   }
+
+  .gallery{
+    max-height: 85vh;
+  }
+
   .gallery-slide {
     height: auto;
   }

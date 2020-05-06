@@ -41,6 +41,7 @@
     <!-- tall gallery -->
     <image-gallery
       id="equilibria"
+      class="hidden"
       :img-src="gallery.urlone"
       title="Some pictures of the process"
     />
