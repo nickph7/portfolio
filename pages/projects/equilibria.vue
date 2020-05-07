@@ -88,7 +88,7 @@ export default {
 
 <style scoped>
 .cover img{
-  min-height: 60vh;
+  height: 60vh;
   object-fit: cover;
 }
 </style>
