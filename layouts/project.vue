@@ -28,21 +28,8 @@ export default {
 
 <style scoped lang="postcss">
 @media screen and (min-width: 1024px) {
-    .sidebar-wrapper{
-      @apply self-stretch bg-purple-500;
-      width: 30%;
-    }
-
-    .sidebar {
-        @apply border border-solid border-orange-500 bg-green-500 uppercase text-center text-xl;
-        position: sticky;
-        align-self: flex-start;
-        /* TODO: Change this variable for navigation laptop */
-        top: var(--nav-height-mob);
-        padding-top: 35vh;
-    }
     .content {
-        width: 70%;
+        width: 75%;
     }
 }
 </style>

@@ -2,6 +2,7 @@
 
 :root{
   --nav-height-mob: 60px;
+  --bottom-bar-height: 47px;
   --mdarkone: #181616;
   --mdarktwo: #252424;
   --mdarkthree: #4b4a4a;
@@ -14,6 +15,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+}
+
+body {
+  background-color: var(--mdarktwo);
 }
 
 /* # UTILITIES */

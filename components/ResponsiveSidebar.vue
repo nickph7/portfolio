@@ -42,6 +42,7 @@ export default {
 }
 </script>
 <style scoped lang="postcss">
+  /* TODO: Make it fixed width */
   .responsive-sidebar-wrapper {
     @apply bg-mdarktwo;
     position: absolute;
@@ -105,7 +106,7 @@ export default {
       position: relative;
       height: auto;
       align-self: stretch;
-      width: 30%; /* Check content width */
+      width: 25%; /* Check content width */
     }
   }
 </style>

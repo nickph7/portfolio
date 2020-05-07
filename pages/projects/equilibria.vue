@@ -1,8 +1,8 @@
 <template>
   <div class="bg-mdarktwo">
-    <div class="cover">
+    <cover>
       <img src="~/assets/img/equilibria/eq-fullview2.jpg">
-    </div>
+    </cover>
     <p-text-box class="text-box p-4">
       <template v-slot:header>
         <h1 class="title">
@@ -38,6 +38,7 @@
         for the installation
       </p>
     </p-text-box>
+    <!-- TODO: Insert youtube video -->
     <!-- tall gallery -->
     <image-gallery
       id="equilibria"
@@ -50,6 +51,10 @@
         link: '/projects/machine-for-birds',
         title: 'Machine For Birds'
       }"
+      :prev="{
+        link: '/projects/ruinism',
+        title: 'Ruinism'
+      }"
     />
   </div>
 </template>
@@ -59,9 +64,11 @@ import MobileProjectsNav from '~/components/MobileProjectsNav'
 import ImageGallery from '~/components/ImageGallery'
 import PTextBox from '~/components/PTextBox'
 import PictureFrame from '~/components/PictureFrame'
+import Cover from '~/components/Cover'
+
 export default {
   name: 'Equilibria',
-  components: { PictureFrame, PTextBox, ImageGallery, MobileProjectsNav },
+  components: { Cover, PictureFrame, PTextBox, ImageGallery, MobileProjectsNav },
   layout: 'project',
   data () {
     return {

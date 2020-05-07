@@ -1,16 +1,16 @@
 <template>
-  <div class="bottom-bar bg-mdarktwo w-full flex items-center lg:hidden">
-    <MButton :on-click="toggleSidebar" class="sidebar-button">
+  <div class="bottom-bar bg-mdarktwo w-full flex items-center">
+    <MButton :on-click="toggleSidebar" class="sidebar-button lg:hidden">
       <i class="icon-up-dir" />
     </MButton>
     <div class="inline-flex justify-between flex-grow mx-2">
-      <div>
+      <div class="link-wrapper">
         <nuxt-link v-if="hasPrev" :to="prev.link ? prev.link : '/'">
           <i class="icon-left tiny-arrow" />
           <span class="font-acuminCondensed uppercase text-mwhite">{{ prev.title }}</span>
         </nuxt-link>
       </div>
-      <div>
+      <div class="link-wrapper">
         <nuxt-link v-if="hasNext" :to="next.link ? next.link : '/'">
           <span class="font-acuminCondensed uppercase text-mwhite">{{ next.title }}</span>
           <i class="icon-right tiny-arrow" />
@@ -70,12 +70,17 @@ export default {
     bottom: -1px;
     border-top: 1px solid var(--mdarkthree);
     z-index: 30;
+    height: var(--bottom-bar-height);
   }
 
   .sidebar-button{
-    width: 47px;
-    height: 47px;
+    width: var(--bottom-bar-height);
+    height: calc(var(--bottom-bar-height) - 1px);
     border-right: 1px solid var(--mdarkthree);
+  }
+
+  .link-wrapper {
+    /*Hello*/
   }
 
   .tiny-arrow{

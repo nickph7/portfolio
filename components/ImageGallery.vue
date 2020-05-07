@@ -30,6 +30,9 @@
 </template>
 
 <script>
+// TODO: Change to support dynamic alt
+// TODO: Change to fit height first
+
 import MButton from '~/components/MButton'
 export default {
   name: 'ImageGallery',
