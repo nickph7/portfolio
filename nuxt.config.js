@@ -33,7 +33,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/vue-awesome-swiper', mode: 'client' }
+    { src: '~/plugins/vue-awesome-swiper', mode: 'client' },
+    { src: '~/plugins/vimeo-player', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,6 +54,9 @@ export default {
   ** Build configuration
   */
   build: {
+    vendor: [
+      'vue-vimeo-player'
+    ],
     /*
     ** You can extend webpack config here
     */

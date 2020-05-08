@@ -43,7 +43,8 @@
     <image-gallery
       id="equilibria"
       class=""
-      :img-src="gallery.urlone"
+      :src="gallery[0].src"
+      :alt="gallery[0].alt"
       title="Some pictures of the process"
     />
     <mobile-projects-nav
@@ -72,23 +73,29 @@ export default {
   layout: 'project',
   data () {
     return {
-      gallery: {
-        urlone: [
-          'equilibria/eq-ball.jpg',
-          'equilibria/eq-tree.jpg',
-          'equilibria/eq-water.jpg',
-          'equilibria/eq-light.jpg',
-          'equilibria/eq-structure.jpg'
-        ]
-      }
+      gallery: [
+        {
+          src: [
+            'equilibria/eq-ball.jpg',
+            'equilibria/eq-tree.jpg',
+            'equilibria/eq-water.jpg',
+            'equilibria/eq-light.jpg',
+            'equilibria/eq-structure.jpg'
+          ],
+          alt: [
+            'View of the ball',
+            'Test with vellum paper',
+            'Ink drops in the water',
+            'Programming the lights',
+            'Finishing the structure'
+          ]
+        }
+      ]
     }
   }
 }
 </script>
 
 <style scoped>
-.cover img{
-  height: 60vh;
-  object-fit: cover;
-}
+
 </style>

@@ -18,6 +18,7 @@
 </template>
 
 <script>
+// TODO: the Nav bar could be smaller to fit other type of gallery
 import Logo from '@/components/Logo.vue'
 
 export default {

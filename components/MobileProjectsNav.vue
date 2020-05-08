@@ -74,8 +74,8 @@ export default {
   }
 
   .sidebar-button{
-    width: var(--bottom-bar-height);
-    height: calc(var(--bottom-bar-height) - 1px);
+    width: var(--bottom-bar-height) !important;
+    height: calc(var(--bottom-bar-height) - 1px) !important;
     border-right: 1px solid var(--mdarkthree);
   }
 
