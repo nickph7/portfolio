@@ -1,14 +1,19 @@
 <template>
-  <div class="gallery-wrapper relative bg-mdarkone">
+  <div class="gallery-wrapper">
     <client-only>
       <swiper ref="imageGallery" class="swiper gallery" :options="gallerySwiperOptions">
-        <swiper-slide v-for="(img, index) in src" :key="index" class="gallery-slide">
-          <img :src="require(`~/assets/img/${img}`)" class="gallery-img" :alt="alt[index]">
-        </swiper-slide>
+        <template v-if="custom">
+          <slot name="customSlides" />
+        </template>
+        <template v-else>
+          <swiper-slide v-for="(img, index) in src" :key="index" class="gallery-slide">
+            <img :src="require(`~/assets/img/${img}`)" class="gallery-img" :alt="alt[index]">
+          </swiper-slide>
+        </template>
       </swiper>
     </client-only>
-    <div class="gal-navigation absolute bottom-0 w-full z-10 flex items-center">
-      <div class="gal-controls inline-flex bg-mdarktwo flex-none">
+    <div class="gal-navigation">
+      <div class="gal-controls">
         <m-button :class="id + 'gallery-swiper-prev'" class="gal-button gal-next" :size="buttonSize">
           <i class="icon-left-dir" />
         </m-button>
@@ -20,8 +25,8 @@
           <i class="icon-right-dir" />
         </m-button>
       </div>
-      <div v-if="title" class="gallery-title text-mwhite font-acuminCondensed flex-auto self-stretch bg-mdarktwo">
-        <div class="flex justify-center items-center h-full">
+      <div class="gallery-title text-mwhite font-acuminCondensed flex-auto self-stretch bg-mdarktwo">
+        <div class="flex justify-center items-center h-full text-center">
           <p>{{ alt[currentIndex] }}</p>
         </div>
       </div>
@@ -35,6 +40,10 @@ export default {
   name: 'ImageGallery',
   components: { MButton },
   props: {
+    custom: {
+      type: Boolean,
+      default: false
+    },
     id: {
       type: String,
       required: true
@@ -47,13 +56,10 @@ export default {
     },
     alt: {
       type: Array,
+      required: true,
       default () {
         return ['Picture -1']
       }
-    },
-    title: {
-      type: String,
-      default: ''
     }
   },
   data () {
@@ -87,10 +93,11 @@ export default {
 }
 </script>
 
-<style scoped lang="postcss">
+<style>
   .gallery-wrapper {
     width: 100%;
-    /* min-width: 0; */
+    position: relative;
+    background-color: var(--mdarkone);
   }
 
   .gallery{
@@ -116,15 +123,24 @@ export default {
   }
 
   .gal-navigation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
     border-top: 1px solid var(--mdarkthree);
   }
 
   .gal-controls{
+    display: inline-flex;
+    background-color: var(--mdarktwo);
+    flex: none;
     width: 140px;
   }
 
   .gallery-title{
-    @apply text-sm;
+    font-size: 0.875rem;
     line-height: 1.2;
   }
 </style>

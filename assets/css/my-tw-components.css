@@ -1,4 +1,4 @@
 .tiny-arrow{
-  @apply text-xs bg-mwhite rounded-sm mr-1;
+  @apply text-xs bg-mwhite rounded-sm mr-1 text-mdarktwo;
   padding: 1px 0;
 }

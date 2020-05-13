@@ -1,12 +1,14 @@
 <template>
   <client-only>
-    <div class="video-frame mborder-bottom">
-      <vimeo-player
-        ref="player"
-        class="my-vimeo-player"
-        :video-id="id"
-        :options="options"
-      />
+    <div class="video-frame mborder-bottom mborder-top my-8">
+      <div class="vimeo-player-wrapper bg-mdarkone">
+        <vimeo-player
+          ref="player"
+          class="my-vimeo-player"
+          :video-id="id"
+          :options="options"
+        />
+      </div>
       <div class="video-title text-center text-mwhite font-acuminCondensed my-4">
         <h3>{{ title }}</h3>
       </div>

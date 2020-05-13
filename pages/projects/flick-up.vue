@@ -28,17 +28,13 @@
     <image-gallery
       id="flickup"
       :src="gallery.src"
-      :alt="alt"
+      :alt="gallery.alt"
       title="deprecated"
     />
     <mobile-projects-nav
       :prev="{
-        link: '/projects/machine-for-birds',
-        title: 'Machine For Birds'
-      }"
-      :next="{
-        link: '/projects/bookmark-vr',
-        title: 'Bookmark VR'
+        link: '/projects/ruinism',
+        title: 'Ruinism'
       }"
     />
   </div>
@@ -68,6 +64,19 @@ export default {
           'fu-screenshots/9-time.jpg',
           'fu-screenshots/10-flight_or_fight.jpg',
           'fu-screenshots/11-toss.jpg'
+        ],
+        alt: [
+          'An Idea',
+          'Game Changer',
+          'A Cure',
+          'A Symbol',
+          'A weapon',
+          'A beacon',
+          'Time to kick it up',
+          'Momentum',
+          "It's time",
+          'Flight of fight',
+          'Toss'
         ]
       }
     }

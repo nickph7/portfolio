@@ -12,5 +12,6 @@ export default {
   .cover img {
     min-height: 60vh;
     object-fit: cover;
+    width: 100%;
   }
 </style>

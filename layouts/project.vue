@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen h-auto mb-10">
+  <div class="main-container min-h-screen h-auto mb-10">
     <navbar />
-    <main class="main-container flex relative w-full">
+    <main class="flex relative w-full">
       <responsive-sidebar />
       <div class="content" style="min-width: 0 !important;">
         <nuxt />

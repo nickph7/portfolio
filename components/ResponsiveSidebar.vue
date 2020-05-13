@@ -3,6 +3,16 @@
     <div class="responsive-sidebar text-center">
       <ul class="content-link project-links uppercase text-xl">
         <li class="responsive-sidebar--link">
+          <nuxt-link to="/projects/stupefiant">
+            Stupéfiant
+          </nuxt-link>
+        </li>
+        <li class="responsive-sidebar--link">
+          <nuxt-link to="/projects/infinite">
+            In.finite
+          </nuxt-link>
+        </li>
+        <li class="responsive-sidebar--link">
           <nuxt-link to="/projects/equilibria">
             Equilibria
           </nuxt-link>
@@ -13,26 +23,16 @@
           </nuxt-link>
         </li>
         <li class="responsive-sidebar--link">
+          <nuxt-link to="/projects/ruinism">
+            Ruinism
+          </nuxt-link>
+        </li>
+        <li class="responsive-sidebar--link">
           <nuxt-link to="/projects/flick-up">
             Flick Up
           </nuxt-link>
         </li>
-        <li class="responsive-sidebar--link">
-          <nuxt-link to="/projects/bookmark-vr">
-            Bookmark VR
-          </nuxt-link>
-        </li>
-        <li class="responsive-sidebar--link">
-          <nuxt-link to="/projects/felprod">
-            Felprod.com
-          </nuxt-link>
-        </li>
       </ul>
-      <div class="index-link ml-2">
-        <nuxt-link to="/projects">
-          <i class="icon-left tiny-arrow" /><span class="content-link uppercase index-link--text">Go to index</span>
-        </nuxt-link>
-      </div>
     </div>
   </div>
 </template>

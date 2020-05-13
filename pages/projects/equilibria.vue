@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-mdarktwo">
+  <div class="">
     <cover>
       <img src="~/assets/img/equilibria/eq-fullview2.jpg">
     </cover>
@@ -45,16 +45,15 @@
       class=""
       :src="gallery[0].src"
       :alt="gallery[0].alt"
-      title="Some pictures of the process"
     />
     <mobile-projects-nav
+      :prev="{
+        link: '/projects/infinite',
+        title: 'In.finite'
+      }"
       :next="{
         link: '/projects/machine-for-birds',
         title: 'Machine For Birds'
-      }"
-      :prev="{
-        link: '/projects/ruinism',
-        title: 'Ruinism'
       }"
     />
   </div>

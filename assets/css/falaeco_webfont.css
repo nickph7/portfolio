@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'falaeco_webfont';
-  src: url('../font/falaeco_webfont.eot?65349624');
-  src: url('../font/falaeco_webfont.eot?65349624#iefix') format('embedded-opentype'),
-       url('../font/falaeco_webfont.woff2?65349624') format('woff2'),
-       url('../font/falaeco_webfont.woff?65349624') format('woff'),
-       url('../font/falaeco_webfont.ttf?65349624') format('truetype'),
-       url('../font/falaeco_webfont.svg?65349624#falaeco_webfont') format('svg');
+  src: url('../font/falaeco_webfont.eot?25662792');
+  src: url('../font/falaeco_webfont.eot?25662792#iefix') format('embedded-opentype'),
+       url('../font/falaeco_webfont.woff2?25662792') format('woff2'),
+       url('../font/falaeco_webfont.woff?25662792') format('woff'),
+       url('../font/falaeco_webfont.ttf?25662792') format('truetype'),
+       url('../font/falaeco_webfont.svg?25662792#falaeco_webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'falaeco_webfont';
-    src: url('../font/falaeco_webfont.svg?65349624#falaeco_webfont') format('svg');
+    src: url('../font/falaeco_webfont.svg?25662792#falaeco_webfont') format('svg');
   }
 }
 */
@@ -71,4 +71,5 @@
 .icon-right:before { content: '\e80d'; } /* '' */
 .icon-phone:before { content: '\e80e'; } /* '' */
 .icon-align-justify:before { content: '\e80f'; } /* '' */
+.icon-email:before { content: '\e810'; } /* '' */
 .icon-spin4:before { content: '\e834'; } /* '' */

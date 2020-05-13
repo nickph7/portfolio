@@ -1,7 +1,7 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/m4b-screenshots/m4b-synth-fm-patch.png">
+      <img src="~/assets/img/m4b-screenshots/m4b-synth-fm-patch.jpg">
     </cover>
     <p-text-box>
       <template v-slot:header>
@@ -32,7 +32,6 @@
       id="m4b"
       :src="gallery.src"
       :alt="gallery.alt"
-      title="different views of the process"
     />
     <mobile-projects-nav
       :prev="{
@@ -40,8 +39,8 @@
         title: 'Equilibria'
       }"
       :next="{
-        link: '/projects/flick-up',
-        title: 'Flick Up'
+        link: '/projects/ruinism',
+        title: 'Ruinism'
       }"
     />
   </div>
@@ -62,11 +61,11 @@ export default {
     return {
       gallery: {
         src: [
-          'm4b-screenshots/m4b-fullview.png',
-          'm4b-screenshots/m4b-bird-playback.png',
-          'm4b-screenshots/m4b-steps.png',
-          'm4b-screenshots/m4b-synth-fm-patch.png',
-          'm4b-screenshots/m4b-synth-interface.png'
+          'm4b-screenshots/m4b-fullview.jpg',
+          'm4b-screenshots/m4b-bird-playback.jpg',
+          'm4b-screenshots/m4b-steps.jpg',
+          'm4b-screenshots/m4b-synth-fm-patch.jpg',
+          'm4b-screenshots/m4b-synth-interface.jpg'
         ],
         alt: [
           'Full view of the patch',

@@ -1,7 +1,7 @@
 .title, .content-link, .nav-link, .gallery-desc{
   color: #f7f3f3;
 }
-
+/*TODO: Reduce font-size on smaller screen */
 .title{
   font-family: acumin-pro-condensed, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 700;
@@ -40,4 +40,8 @@
   font-size: 1.2rem;
   letter-spacing: 0.04rem;
   text-transform: uppercase;
+}
+
+.ext-link {
+  color: #98c1ce;
 }

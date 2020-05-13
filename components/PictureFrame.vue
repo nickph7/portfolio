@@ -1,5 +1,5 @@
 <template>
-  <div class="picture-frame">
+  <div class="picture-frame mborder-bottom mborder-top my-8">
     <figure>
       <slot />
     </figure>
@@ -13,15 +13,9 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-  .picture-frame{
-    @apply border border-solid border-mdarkthree py-4;
-  }
-
-  .picture-frame img {
-    @apply pb-2;
-  }
 
   .picture-frame figcaption{
-    @apply text-center font-acuminCondensed text-mwhite;
+    @apply text-center font-acuminCondensed text-mwhite my-2;
   }
+
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <footer class="text-center my-3">
-    <p>Created by Nicolas Prud'homme 2020</p>
+  <footer class="text-center flex flex-col items-center h-12 justify-center text-mwhite font-acuminCondensed mborder-top">
+    <p>Created by Nicolas Prud'homme &copy; 2020</p>
   </footer>
 </template>
 
@@ -8,7 +8,12 @@
 // TODO: Finish styling the footer (Top border)
 
 export default {
-  name: 'MFooter'
+  name: 'MFooter',
+  computed: {
+    yearNow () {
+      return new Date().getFullYear()
+    }
+  }
 }
 </script>
 
