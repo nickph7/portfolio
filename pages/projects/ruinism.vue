@@ -26,14 +26,16 @@
         quality of Howard's composition.
       </p>
     </p-text-box>
-    <image-gallery
-      v-for="gallery in galleries"
-      :id="gallery.id"
-      :key="gallery.id"
-      class="galleries"
-      :src="gallery.src"
-      :alt="gallery.alt"
-    />
+    <div class="galleries">
+      <image-gallery
+        v-for="gallery in galleries"
+        :id="gallery.id"
+        :key="gallery.id"
+        class="gallery"
+        :src="gallery.src"
+        :alt="gallery.alt"
+      />
+    </div>
     <mobile-projects-nav
       :prev="{
         link: '/projects/machine-for-birds',
@@ -119,11 +121,7 @@ export default {
 </script>
 
 <style scoped>
-.galleries{
-  border-top: 1px solid var(--mdarkthree);
-}
-.galleries:not(:last-child){
+.galleries .gallery:not(:last-child){
   border-bottom: 1px solid var(--mdarkthree);
-  margin-bottom: 2rem;
 }
 </style>

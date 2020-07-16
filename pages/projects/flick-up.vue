@@ -6,7 +6,7 @@
           Flick Up
         </h1>
         <h2 class="date">
-          December 2019
+          December 2015
         </h2>
       </template>
       <p>
@@ -24,7 +24,22 @@
         using vector-graphic software.
       </p>
     </p-text-box>
-    <m-vimeo-player :id="258301704" title="Flick Up 2016" />
+    <picture-frame
+      :custom="true"
+      title="Flick Up Video"
+    >
+      <template v-slot:customFrame>
+        <div class="video-container">
+          <iframe
+            class="responsive-video"
+            src="https://player.vimeo.com/video/258301704"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          />
+        </div>
+      </template>
+    </picture-frame>
     <image-gallery
       id="flickup"
       :src="gallery.src"
@@ -42,12 +57,12 @@
 
 <script>
 import PTextBox from '~/components/PTextBox'
-import MVimeoPlayer from '~/components/MVimeoPlayer'
 import ImageGallery from '~/components/ImageGallery'
 import MobileProjectsNav from '~/components/MobileProjectsNav'
+import PictureFrame from '~/components/PictureFrame'
 export default {
   name: 'FlickUp',
-  components: { MobileProjectsNav, MVimeoPlayer, PTextBox, ImageGallery },
+  components: { PictureFrame, MobileProjectsNav, PTextBox, ImageGallery },
   layout: 'project',
   data () {
     return {
@@ -90,5 +105,20 @@ export default {
 </script>
 
 <style scoped>
+  .video-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+  }
 
+  .responsive-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container min-h-screen h-auto mb-10">
+  <div class="main-container min-h-screen h-auto">
     <navbar />
     <main class="flex relative w-full">
       <responsive-sidebar />

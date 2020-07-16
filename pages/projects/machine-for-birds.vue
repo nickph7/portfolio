@@ -30,6 +30,7 @@
     <m-vimeo-player :id="386896207" title="Machine to hand with birds Demo" />
     <image-gallery
       id="m4b"
+      class="mborder-top"
       :src="gallery.src"
       :alt="gallery.alt"
     />

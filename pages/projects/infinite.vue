@@ -80,6 +80,8 @@
 </template>
 
 <script>
+// TODO: Videos are not played on mobile.
+
 import Cover from '~/components/Cover'
 import PTextBox from '~/components/PTextBox'
 import ImageGallery from '~/components/ImageGallery'

@@ -1,6 +1,6 @@
 <template>
   <client-only>
-    <div class="video-frame mborder-bottom mborder-top my-8">
+    <div class="video-frame mborder-top">
       <div class="vimeo-player-wrapper bg-mdarkone">
         <vimeo-player
           ref="player"

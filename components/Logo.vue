@@ -38,4 +38,7 @@
     height: 25px;
     width: auto;
   }
+  .cls-1{
+    fill: var(--mwhite);
+  }
 </style>

@@ -25,20 +25,51 @@
       </p>
     </p-text-box>
     <!-- picture frame -->
-    <picture-frame class="picture-frame">
-      <img src="~/assets/img/equilibria/eq-fullview.jpg">
-      <figcaption>Full view of the structure</figcaption>
-    </picture-frame>
+    <picture-frame
+      src="equilibria/eq-fullview.jpg"
+      title="Full view of the structure"
+    />
     <p-text-box>
       <p class="text">
         For this project, I was tasked to design and build the central structure, and program our interactive branches
         via Arduino and UDP protocol. In addition, I worked actively with my team on the design of the forest and
         how we would kill section of the forest when visitors would stay too long in one part of the installation.
         With the help of my teammates Emily and Audrey, we went on the top of the Mount Royal to get some footage
-        for the installation
+        for the installation.
+      </p>
+      <p class="text">
+        Equilibria was selected to be part of Concordia's Design and Computation Arts year end show of 2020 and earned the award for
+        best artwork in the category of Sustainability and Environmental Awareness. **Something something about stripped down version**
       </p>
     </p-text-box>
-    <!-- TODO: Insert youtube video -->
+    <!-- TODO: Need to create a vue youtube player-->
+    <image-gallery
+      id="youtube-gallery"
+      class="mborder-bottom mborder-top"
+      :custom="true"
+      :alt="gallery[1].alt"
+    >
+      <template v-slot:customSlides>
+        <swiper-slide class="gallery-slide">
+          <iframe
+            class="gallery-img youtube-iframe"
+            src="https://www.youtube.com/embed/UwcoFXKnpOw"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </swiper-slide>
+        <swiper-slide class="gallery-slide">
+          <iframe
+            class="gallery-img youtube-iframe"
+            src="https://www.youtube.com/embed/alJGOYO-9xU"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </swiper-slide>
+      </template>
+    </image-gallery>
     <!-- tall gallery -->
     <image-gallery
       id="equilibria"
@@ -68,6 +99,7 @@ import Cover from '~/components/Cover'
 
 export default {
   name: 'Equilibria',
+  // eslint-disable-next-line vue/no-unused-components
   components: { Cover, PictureFrame, PTextBox, ImageGallery, MobileProjectsNav },
   layout: 'project',
   data () {
@@ -88,6 +120,13 @@ export default {
             'Programming the lights',
             'Finishing the structure'
           ]
+        },
+        // Youtube alts
+        {
+          alt: [
+            'Demonstration of the artwork',
+            'Trailer for the stripped-down version'
+          ]
         }
       ]
     }
@@ -96,5 +135,8 @@ export default {
 </script>
 
 <style scoped>
-
+.youtube-iframe{
+  width: 100%;
+  height: calc(100% - 39px);
+}
 </style>

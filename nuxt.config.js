@@ -54,6 +54,9 @@ export default {
   optimizedImages: {
     optimizeImages: true
   },
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css'
+  },
   /*
   ** Nuxt.js modules
   */

@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// TODO: Finish styling the footer (Top border)
 
 export default {
   name: 'MFooter',

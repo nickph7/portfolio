@@ -19,7 +19,7 @@
         </m-button>
         <div
           :class="id + 'gallery-swiper-fract'"
-          class="px-4 gal-fract text-mwhite font-acuminXcondensed self-center"
+          class="px-4 gal-fract text-mwhite font-acuminXcondensed self-center text-center"
         />
         <m-button :class="id + 'gallery-swiper-next'" class="gal-button gal-prev" :size="buttonSize">
           <i class="icon-right-dir" />
@@ -98,6 +98,11 @@ export default {
     width: 100%;
     position: relative;
     background-color: var(--mdarkone);
+  }
+
+  /*Need to offset because of borders */
+  .swiper .swiper-wrapper{
+    bottom: 2px;
   }
 
   .gallery{
