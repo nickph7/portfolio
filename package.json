@@ -22,12 +22,12 @@
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.0.0",
-    "@nuxtjs/eslint-config": "^2.0.0",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "@nuxtjs/tailwindcss": "^1.0.0",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^3.0.2",
     "babel-eslint": "^10.0.1",
     "cross-env": "^7.0.2",
-    "eslint": "^6.1.0",
+    "eslint": "^7.9.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "imagemin-mozjpeg": "^8.0.0"
   }

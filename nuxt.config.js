@@ -1,6 +1,9 @@
 
 export default {
-  mode: 'universal',
+  /*
+  ** Nuxt target
+  ** See https://nuxtjs.org/api/configuration-target
+  */
   target: 'static',
   /*
   ** Headers of the page
@@ -14,8 +17,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icon.svg' },
-      { rel: 'stylesheet', href: 'https://use.typekit.net/frb6tpn.css' },
-      { rel: 'stylesheet', href: 'https://unpkg.com/swiper/css/swiper.min.css' }
+      { rel: 'stylesheet', href: 'https://use.typekit.net/frb6tpn.css' }
+      // TEST { rel: 'stylesheet', href: 'https://unpkg.com/swiper@5.4.5/css/swiper.min.css' }
     ]
   },
   /*
@@ -54,9 +57,6 @@ export default {
   ],
   optimizedImages: {
     optimizeImages: true
-  },
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css'
   },
   /*
   ** Nuxt.js modules

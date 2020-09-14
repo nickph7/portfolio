@@ -24,7 +24,6 @@
         ecosystem and hopes to develop an awareness of their own finite reality.
       </p>
     </p-text-box>
-    <!-- picture frame -->
     <picture-frame
       src="equilibria/eq-fullview.jpg"
       title="Full view of the structure"
@@ -39,10 +38,10 @@
       </p>
       <p class="text">
         Equilibria was selected to be part of Concordia's Design and Computation Arts year end show of 2020 and earned the award for
-        best artwork in the category of Sustainability and Environmental Awareness. **Something something about stripped down version**
+        best artwork in the category of Sustainability and Environmental Awareness. For the occasion, we have designed a stripped-down
+        version of the piece to adapt to different exhibition environments.
       </p>
     </p-text-box>
-    <!-- TODO: Need to create a vue youtube player-->
     <image-gallery
       id="youtube-gallery"
       class="mborder-bottom mborder-top"
@@ -137,6 +136,7 @@ export default {
 <style scoped>
 .youtube-iframe{
   width: 100%;
+  /* 100% of container - the height of the title bar */
   height: calc(100% - 39px);
 }
 </style>

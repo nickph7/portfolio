@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import './my-tw-components.css';
-@import 'tailwindcss/utilities';
+@layer components {
+  .tiny-arrow{
+    @apply text-xs bg-mwhite rounded-sm mr-1 text-mdarktwo;
+    padding: 1px 0;
+  }
+}
