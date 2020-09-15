@@ -5,6 +5,7 @@
     </vue-plyr>
     <vue-plyr v-else :options="mobileOptions" class="h-full my-plyr">
       <div class="my-video" data-plyr-provider="vimeo" data-plyr-embed-id="417326836" />
+      <!-- 417326836 test-id:259411563-->
     </vue-plyr>
   </div>
 </template>
@@ -17,8 +18,11 @@ export default {
     return {
       isMobile: false,
       options: {
-        autoplay: true,
+        storage: {
+          enabled: false
+        },
         muted: true,
+        autoplay: true,
         loop: { active: true },
         controls: false
       }
