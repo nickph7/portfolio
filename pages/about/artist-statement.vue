@@ -7,7 +7,6 @@
         </h1>
       </template>
       <div>
-        <img src="~/assets/img/shot.jpg" alt="portrait" class="portrait md:float-left md:w-1/2">
         <p>
           Montreal multi-disciplinary artist Nick Prud'homme focuses on creating experimental software and artworks
           which strive to create an immersive and engaging experience. With a strong background in audiovisual production, his
@@ -72,19 +71,5 @@ export default {
 <style scoped>
   .statement-title{
     font-size: 2rem;
-  }
-
-  .portrait{
-    width: 90%;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-  }
-
-  @media (min-width: 768px) {
-    .portrait{
-      width: 35%;
-      margin: 0;
-      padding-right: 1rem;
-    }
   }
 </style>

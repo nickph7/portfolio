@@ -1,20 +1,23 @@
 <template>
   <div class="about-container flex flex-col md:flex-row-reverse">
     <p-text-box class="about-presentation">
-      <template>
-        <h1 class="title about-presentation--title">
+      <template v-slot:header>
+        <h1 class="title about-presentation--title text-center md:text-left">
           Nice to meet you
         </h1>
       </template>
-      <p>
-        Currently based in Montreal, I focus on creating sensational and experimental software and artworks. I am a jack-of-all
-        trades, and have sharpenened my skills in multiple areas such as audiovisual production, post-production, multimedia and
-        web programming. I strive to make projects that redefine the boundaries of how we experience the web and multimedia,
-        using cutting edge technologies and innovative practices to create truly unique and memorable experiences. Outside of
-        work, I am DJ and musician passionate about acoustic and sound system culture, and have built with my group HiFive our
-        own sound system which is quickly gaining visibility. If you are interested in the stuff I do, I would love to have a
-        chat.
-      </p>
+      <div>
+        <img src="~/assets/img/shot.jpg" alt="portrait" class="portrait sm:float-left">
+        <p>
+          Currently based in Montreal, I focus on creating sensational and experimental software and artworks. I am a jack-of-all
+          trades, and have sharpenened my skills in multiple areas such as audiovisual production, post-production, multimedia and
+          web programming. I strive to make projects that redefine the boundaries of how we experience the web and multimedia,
+          using cutting edge technologies and innovative practices to create truly unique and memorable experiences. Outside of
+          work, I am DJ and musician passionate about acoustic and sound system culture, and have built with my group HiFive our
+          own sound system which is quickly gaining visibility. If you are interested in the stuff I do, I would love to have a
+          chat.
+        </p>
+      </div>
       <div class="contact-info-box py-4">
         <i class="icon-download tiny-arrow presentation-icon" />
         <a class="ext-link" href="/CV_2020_NicolasPrudhomme.pdf" download>Download My CV</a>
@@ -73,6 +76,7 @@ export default {
     font-size: 3rem;
     color: var(--mdarktwo);
     -webkit-text-stroke: 1.5px var(--mwhite);
+    padding-bottom: 2rem !important;
   }
 
   .about-contact--title{
@@ -106,6 +110,28 @@ export default {
   @media screen and (min-width: 767px){
     .about-presentation--title{
       font-size: 4rem;
+    }
+  }
+
+  .portrait{
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .portrait{
+      width: 50%;
+      margin: 0;
+      margin-top: 0.4rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @media (min-width: 767px) {
+    .portrait{
+      width: 35%;
     }
   }
 
