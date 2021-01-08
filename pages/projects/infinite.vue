@@ -119,6 +119,11 @@ export default {
         }
       ]
     }
+  },
+  head () {
+    return {
+      title: 'In.finite'
+    }
   }
 }
 </script>

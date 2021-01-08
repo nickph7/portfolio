@@ -41,7 +41,12 @@ import MVimeoPlayer from '~/components/MVimeoPlayer'
 export default {
   name: 'Stupefiant',
   components: { PTextBox, Cover, MobileProjectsNav, MVimeoPlayer },
-  layout: 'project'
+  layout: 'project',
+  head () {
+    return {
+      title: 'Stupéfiant'
+    }
+  }
 }
 </script>
 

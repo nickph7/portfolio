@@ -10,6 +10,7 @@ export default {
   */
   head: {
     title: 'Falaeco Portfolio',
+    titleTemplate: '%s | Falaeco Portfolio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
