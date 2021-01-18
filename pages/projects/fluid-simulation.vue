@@ -1,7 +1,7 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/fluid-sim/10k-2.jpg">
+      <img :src="require('~/assets/img/fluid-sim/10k-2_2x.jpg')">
     </cover>
     <p-text-box>
       <template v-slot:header>

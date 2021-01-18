@@ -49,6 +49,10 @@
           <div class="contact-link">
             <a class="ext-link" href="https://vimeo.com/user30738704">Nicolas Prudhomme</a>
           </div>
+          <i class="icon-linkedin contact-icon" style="transform: translateY(-2pt);" />
+          <div class="contact-link">
+            <a class="ext-link" href="https://www.linkedin.com/in/nicph/">Nicph</a>
+          </div>
         </div>
       </template>
     </p-text-box>

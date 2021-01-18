@@ -1,7 +1,7 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/voidfilling/still2.jpg">
+      <img src="~/assets/img/voidfilling/still2_2x.jpg">
     </cover>
     <p-text-box>
       <template v-slot:header>
