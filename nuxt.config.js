@@ -69,7 +69,7 @@ export default {
     extendRoutes (routes, resolve) {
       routes.push({
         path: '/projects',
-        redirect: '/projects/stupefiant'
+        redirect: '/projects/fluid-simulation'
       })
     }
   },

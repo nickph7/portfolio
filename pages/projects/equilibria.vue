@@ -80,8 +80,8 @@
         title: 'In.finite'
       }"
       :next="{
-        link: '/projects/machine-for-birds',
-        title: 'Machine For Birds'
+        link: '/projects/ruinism',
+        title: 'Ruinism'
       }"
     />
   </div>

@@ -24,6 +24,10 @@
     <m-vimeo-player :id="412561380" title="Whiskey Visuals" />
     <m-vimeo-player :id="412560280" title="Absinthe Visuals" />
     <mobile-projects-nav
+      :prev="{
+        link: '/projects/voidfilling',
+        title: 'Voidfilling',
+      }"
       :next="{
         link: '/projects/infinite',
         title: 'In.finite'
