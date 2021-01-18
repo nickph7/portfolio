@@ -2,34 +2,9 @@
   <div id="sidebar" class="responsive-sidebar-wrapper mborder-right">
     <div class="responsive-sidebar text-center">
       <ul class="content-link project-links uppercase text-xl">
-        <li class="responsive-sidebar--link">
-          <nuxt-link to="/projects/stupefiant">
-            Stupéfiant
-          </nuxt-link>
-        </li>
-        <li class="responsive-sidebar--link">
-          <nuxt-link to="/projects/infinite">
-            In.finite
-          </nuxt-link>
-        </li>
-        <li class="responsive-sidebar--link">
-          <nuxt-link to="/projects/equilibria">
-            Equilibria
-          </nuxt-link>
-        </li>
-        <li class="responsive-sidebar--link">
-          <nuxt-link to="/projects/machine-for-birds">
-            Machine For Birds
-          </nuxt-link>
-        </li>
-        <li class="responsive-sidebar--link">
-          <nuxt-link to="/projects/ruinism">
-            Ruinism
-          </nuxt-link>
-        </li>
-        <li class="responsive-sidebar--link">
-          <nuxt-link to="/projects/flick-up">
-            Flick Up
+        <li v-for="project in projects" :key="project.link" class="responsive-sidebar--link">
+          <nuxt-link :to="`/projects/${project.link}`">
+            {{ project.title }}
           </nuxt-link>
         </li>
       </ul>
@@ -38,9 +13,23 @@
 </template>
 <script>
 export default {
-  name: 'ResponsiveSidebar'
+  name: 'ResponsiveSidebar',
+  data () {
+    return {
+      projects: [
+        { title: 'Fluid Simulation', link: 'fluid-simulation' },
+        { title: 'Voidfilling', link: 'voidfilling' },
+        { title: 'Stupéfiant', link: 'stupefiant' },
+        { title: 'In.finite', link: 'infinite' },
+        { title: 'Equilibria', link: 'equilibria' },
+        { title: 'Ruinism', link: 'ruinism' },
+        { title: 'Flick Up', link: 'flick-up' }
+      ]
+    }
+  }
 }
 </script>
+
 <style scoped lang="postcss">
   .responsive-sidebar-wrapper {
     @apply bg-mdarktwo;

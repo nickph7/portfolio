@@ -24,6 +24,10 @@
     <m-vimeo-player :id="412561380" title="Whiskey Visuals" />
     <m-vimeo-player :id="412560280" title="Absinthe Visuals" />
     <mobile-projects-nav
+      :prev="{
+        link: '/projects/voidfilling',
+        title: 'Voidfilling',
+      }"
       :next="{
         link: '/projects/infinite',
         title: 'In.finite'
@@ -41,7 +45,12 @@ import MVimeoPlayer from '~/components/MVimeoPlayer'
 export default {
   name: 'Stupefiant',
   components: { PTextBox, Cover, MobileProjectsNav, MVimeoPlayer },
-  layout: 'project'
+  layout: 'project',
+  head () {
+    return {
+      title: 'Stupéfiant'
+    }
+  }
 }
 </script>
 

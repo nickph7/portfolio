@@ -100,6 +100,11 @@ export default {
     alt () {
       return Array(this.gallery.src.length).fill('Stills')
     }
+  },
+  head () {
+    return {
+      title: 'Flick Up'
+    }
   }
 }
 </script>

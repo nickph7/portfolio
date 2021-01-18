@@ -116,6 +116,11 @@ export default {
         }
       ]
     }
+  },
+  head () {
+    return {
+      title: 'Ruinism'
+    }
   }
 }
 </script>

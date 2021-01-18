@@ -77,6 +77,11 @@ export default {
         ]
       }
     }
+  },
+  head () {
+    return {
+      title: 'Machine For Birds'
+    }
   }
 }
 </script>

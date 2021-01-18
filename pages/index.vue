@@ -47,6 +47,11 @@ export default {
     updateSize () {
       this.isMobile = window.innerWidth <= 600
     }
+  },
+  head () {
+    return {
+      title: 'Home'
+    }
   }
 }
 </script>

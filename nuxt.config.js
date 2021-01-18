@@ -10,6 +10,7 @@ export default {
   */
   head: {
     title: 'Falaeco Portfolio',
+    titleTemplate: '%s | Falaeco Portfolio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -56,7 +57,7 @@ export default {
     '@aceforth/nuxt-optimized-images'
   ],
   optimizedImages: {
-    optimizeImages: true
+    optimizeImages: false
   },
   /*
   ** Nuxt.js modules
@@ -68,7 +69,7 @@ export default {
     extendRoutes (routes, resolve) {
       routes.push({
         path: '/projects',
-        redirect: '/projects/stupefiant'
+        redirect: '/projects/fluid-simulation'
       })
     }
   },

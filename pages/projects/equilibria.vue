@@ -37,9 +37,7 @@
         for the installation.
       </p>
       <p class="text">
-        Equilibria was selected to be part of Concordia's Design and Computation Arts year end show of 2020 and earned the award for
-        best artwork in the category of Sustainability and Environmental Awareness. For the occasion, we have designed a stripped-down
-        version of the piece to adapt to different exhibition environments.
+        Equilibria was selected to be part of Concordia's Design and Computation Arts year end show of 2020, and earned the award for best artwork in the category of Sustainability and Environmental Awareness. For the occasion, we have designed a stripped-down version of the piece suitable for different exhibition environments.
       </p>
     </p-text-box>
     <image-gallery
@@ -82,8 +80,8 @@
         title: 'In.finite'
       }"
       :next="{
-        link: '/projects/machine-for-birds',
-        title: 'Machine For Birds'
+        link: '/projects/ruinism',
+        title: 'Ruinism'
       }"
     />
   </div>
@@ -128,6 +126,11 @@ export default {
           ]
         }
       ]
+    }
+  },
+  head () {
+    return {
+      title: 'Equilibria'
     }
   }
 }
