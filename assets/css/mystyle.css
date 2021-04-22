@@ -1,3 +1,4 @@
+/* TODO: Move this to Tailwindcss */
 /* # VARIABLES */
 
 :root{
@@ -19,6 +20,13 @@
 
 body {
   background-color: var(--mdarktwo);
+}
+
+/* # LAYOUT */
+
+.main-container{
+  margin-top: var(--nav-height-mob);
+  min-height: calc(100vh - var(--nav-height-mob) - 3rem);
 }
 
 /* # UTILITIES */

@@ -9,7 +9,7 @@
           :options="options"
         />
       </div>
-      <div class="video-title text-center text-mwhite font-acuminCondensed my-4">
+      <div class="my-4 text-center video-title text-mwhite font-acuminCondensed">
         <h3>{{ title }}</h3>
       </div>
     </div>
@@ -19,6 +19,7 @@
 export default {
   name: 'MVimeoPlayer',
   props: {
+    // TODO: Needs to be a string (warning)
     id: {
       type: Number,
       required: true

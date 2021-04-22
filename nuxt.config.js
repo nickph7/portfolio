@@ -29,6 +29,7 @@ export default {
   loading: '~/components/Loading.vue',
   /*
   ** Global CSS
+  ** TODO: Remove global CSS for plugins
   */
   css: [
     '~/assets/css/falaeco_webfont.css',
@@ -56,8 +57,9 @@ export default {
     '@nuxtjs/tailwindcss',
     '@aceforth/nuxt-optimized-images'
   ],
+
   optimizedImages: {
-    optimizeImages: false
+    optimizeImages: true
   },
   /*
   ** Nuxt.js modules

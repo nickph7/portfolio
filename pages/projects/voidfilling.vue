@@ -29,7 +29,7 @@
         manifests itself as a conspicuous void.
       </p>
       <p>
-        VoidFilling is a generative artwork made of a low-poly human head,
+        VoidFilling is a generative artwork consisting of a low-poly human head,
         rendered with lines and sprawling pixels, sitting in a cloud of tweets.
         Tracking the activity on social media, the particles activate parts of
         the model's mesh, depicting our human quest to fill the void

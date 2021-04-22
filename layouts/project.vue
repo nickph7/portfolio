@@ -1,7 +1,7 @@
 <template>
-  <div class="main-container min-h-screen h-auto">
+  <div class="h-auto min-h-screen mx-auto main-container">
     <navbar />
-    <main class="flex relative w-full">
+    <main class="relative flex w-full">
       <responsive-sidebar />
       <div class="content" style="min-width: 0 !important;">
         <nuxt />
@@ -29,7 +29,7 @@ export default {
 <style scoped lang="postcss">
 @media screen and (min-width: 1024px) {
     .content {
-        width: 75%;
+      width: 75%;
     }
 }
 </style>

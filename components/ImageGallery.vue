@@ -2,10 +2,11 @@
   <div class="gallery-wrapper">
     <client-only>
       <swiper ref="imageGallery" class="swiper gallery" :options="gallerySwiperOptions">
-        <!-- if the slide is not images -->
+        <!-- custom slides -->
         <template v-if="custom">
           <slot name="customSlides" />
         </template>
+        <!-- default image slides -->
         <template v-else>
           <swiper-slide v-for="(img, index) in src" :key="index" class="gallery-slide">
             <img :src="require(`~/assets/img/${img}`)" class="gallery-img" :alt="alt[index]">
@@ -13,6 +14,7 @@
         </template>
       </swiper>
     </client-only>
+    <!-- NAVI -->
     <div class="gal-navigation">
       <div class="gal-controls">
         <m-button :class="id + 'gallery-swiper-prev'" class="gal-button gal-next" :size="buttonSize">

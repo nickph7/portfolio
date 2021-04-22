@@ -9,7 +9,6 @@ export default {
 }
 </script>
 <style scoped>
-  /* TODO: Change this so covers always have the same height */
   .cover img {
     height: 70vh;
     object-fit: cover;
