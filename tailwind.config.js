@@ -18,6 +18,13 @@ module.exports = {
       mgreyone: '#c4c2c2',
       mgreytwo: '#dcdada',
       mwhite: '#f7f3f3'
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px'
     }
   },
   variants: {},
@@ -31,5 +38,9 @@ module.exports = {
       'plugins/**/*.js',
       'nuxt.config.js'
     ]
+  },
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
   }
 }
