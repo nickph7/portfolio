@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.4",
     "plyr": "^3.6.2",
     "swiper": "^5.3.8",
     "vue-awesome-swiper": "^4.1.1",

@@ -38,8 +38,8 @@
     </div>
     <mobile-projects-nav
       :prev="{
-        link: '/projects/machine-for-birds',
-        title: 'Machine For Birds'
+        link: '/projects/equilibria',
+        title: 'Equilibria'
       }"
       :next="{
         link: '/projects/flick-up',
