@@ -1,6 +1,6 @@
 <template>
-  <div id="sidebar" class="flex-grow responsive-sidebar-wrapper mborder-right">
-    <div class="text-center responsive-sidebar">
+  <div id="sidebar" class="flex-grow responsive-sidebar-wrapper mborder-right" :class="opened ? 'w-64' : 'w-0'">
+    <div class="text-center responsive-sidebar lg:flex" :class="opened ? 'flex' : 'hidden'">
       <ul class="text-xl uppercase content-link project-links">
         <li v-for="project in projects" :key="project.link" class="responsive-sidebar--link">
           <nuxt-link :to="`/projects/${project.link}`">
@@ -24,8 +24,18 @@ export default {
         { title: 'Equilibria', link: 'equilibria' },
         { title: 'Ruinism', link: 'ruinism' },
         { title: 'Flick Up', link: 'flick-up' }
-      ]
+      ],
+      opened: false
     }
+  },
+  created () {
+    this.$nuxt.$on('sidebar-toggled', () => {
+      this.opened = !this.opened
+    })
+
+    this.$nuxt.$on('close-sidebar', () => {
+      this.opened = false
+    })
   }
 }
 </script>
@@ -37,15 +47,14 @@ export default {
     top: 0;
     left: 0;
     height: 100%;
-    min-width: 250px;
-    display: none;
+    display: block;
     z-index: 20;
+    transition: 0.2s;
   }
 
   .responsive-sidebar {
     position: sticky;
     top: var(--nav-height-mob); /*Top should be equal to nav bar height*/
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;

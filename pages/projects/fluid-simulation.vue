@@ -68,7 +68,7 @@ import ImageGallery from '~/components/ImageGallery'
 import MVimeoPlayer from '~/components/MVimeoPlayer'
 
 export default {
-  name: 'MachineForBirds',
+  name: 'FluidSimulation',
   components: {
     MVimeoPlayer,
     ImageGallery,

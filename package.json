@@ -18,7 +18,7 @@
     "swiper": "^5.3.8",
     "vue-awesome-swiper": "^4.1.1",
     "vue-plyr": "^6.0.4",
-    "vue-vimeo-player": "^0.1.0"
+    "vue-vimeo-player": "^0.1.2"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.0.0",
