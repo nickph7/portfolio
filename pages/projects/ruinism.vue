@@ -26,12 +26,12 @@
         quality of Howard's composition.
       </p>
     </p-text-box>
-    <div class="galleries">
+    <div class="ruinism-galleries">
       <image-gallery
         v-for="gallery in galleries"
         :id="gallery.id"
         :key="gallery.id"
-        class="gallery"
+        class="ruinism-gallery"
         :src="gallery.src"
         :alt="gallery.alt"
       />
@@ -126,7 +126,7 @@ export default {
 </script>
 
 <style scoped>
-.galleries .gallery:not(:last-child){
+.ruinism-galleries .ruinism-gallery:not(:last-child){
   border-bottom: 1px solid var(--mdarkthree);
 }
 </style>

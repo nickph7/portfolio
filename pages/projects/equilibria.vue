@@ -3,7 +3,7 @@
     <cover>
       <img src="~/assets/img/equilibria/eq-fullview2.jpg">
     </cover>
-    <p-text-box class="text-box p-4">
+    <p-text-box class="p-4 text-box">
       <template v-slot:header>
         <h1 class="title">
           Equilibria
@@ -49,6 +49,8 @@
       <template v-slot:customSlides>
         <swiper-slide class="gallery-slide">
           <iframe
+            width="560"
+            height="315"
             class="gallery-img youtube-iframe"
             src="https://www.youtube.com/embed/UwcoFXKnpOw"
             frameborder="0"
@@ -58,6 +60,8 @@
         </swiper-slide>
         <swiper-slide class="gallery-slide">
           <iframe
+            width="560"
+            height="315"
             class="gallery-img youtube-iframe"
             src="https://www.youtube.com/embed/alJGOYO-9xU"
             frameborder="0"

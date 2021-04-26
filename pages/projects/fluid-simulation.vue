@@ -43,7 +43,7 @@
         images.
       </p>
     </p-text-box>
-    <m-vimeo-player :id="488361910" title="Evolution of my fluid solver" />
+    <m-vimeo-player id="488361910" title="Evolution of my fluid solver" />
     <image-gallery
       id="fs"
       class="mborder-top"
