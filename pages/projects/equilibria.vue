@@ -25,8 +25,7 @@
       </p>
     </p-text-box>
     <picture-frame
-      src="equilibria/eq-fullview.jpg"
-      title="Full view of the structure"
+      :source="{ src: require('~/assets/img/equilibria/eq-fullview.jpg'), alt: 'Full view of the structure' }"
     />
     <p-text-box>
       <p class="text">
@@ -44,7 +43,7 @@
       id="youtube-gallery"
       class="mborder-bottom mborder-top"
       :custom="true"
-      :alt="gallery[1].alt"
+      :alt="youtubeAlts"
     >
       <template v-slot:customSlides>
         <swiper-slide class="gallery-slide">
@@ -75,8 +74,7 @@
     <image-gallery
       id="equilibria"
       class=""
-      :src="gallery[0].src"
-      :alt="gallery[0].alt"
+      :source="gallery"
     />
     <mobile-projects-nav
       :prev="{
@@ -106,29 +104,15 @@ export default {
   data () {
     return {
       gallery: [
-        {
-          src: [
-            'equilibria/eq-ball.jpg',
-            'equilibria/eq-tree.jpg',
-            'equilibria/eq-water.jpg',
-            'equilibria/eq-light.jpg',
-            'equilibria/eq-structure.jpg'
-          ],
-          alt: [
-            'View of the ball',
-            'Test with vellum paper',
-            'Ink drops in the water',
-            'Programming the lights',
-            'Finishing the structure'
-          ]
-        },
-        // Youtube alts
-        {
-          alt: [
-            'Demonstration of the artwork',
-            'Trailer for the stripped-down version'
-          ]
-        }
+        { src: require('~/assets/img/equilibria/eq-ball.jpg'), alt: 'View of the ball' },
+        { src: require('~/assets/img/equilibria/eq-tree.jpg'), alt: 'Test with vellum paper' },
+        { src: require('~/assets/img/equilibria/eq-water.jpg'), alt: 'Ink drops in the water' },
+        { src: require('~/assets/img/equilibria/eq-light.jpg'), alt: 'Programming the lights' },
+        { src: require('~/assets/img/equilibria/eq-structure.jpg'), alt: 'Finishing the structure' }
+      ],
+      youtubeAlts: [
+        'Demonstration of the artwork',
+        'Trailer for the stripped-down version'
       ]
     }
   },
@@ -144,6 +128,7 @@ export default {
 .youtube-iframe{
   width: 100%;
   /* 100% of container - the height of the title bar */
+  /* TODO: Fix the youtube iframes */
   height: calc(100% - 39px);
 }
 </style>

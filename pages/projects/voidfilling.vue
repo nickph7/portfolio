@@ -43,12 +43,11 @@
     </p-text-box>
     <!-- TODO: Change ID -->
     <m-vimeo-player :id="501028450" title="Voidfilling Demo" />
-    <!-- TODO: Change Images-->
+    <!-- TODO: Change Images -->
     <image-gallery
       id="vf"
       class="mborder-top"
-      :src="gallery.src"
-      :alt="gallery.alt"
+      :source="gallery"
     />
     <mobile-projects-nav
       :prev="{
@@ -82,16 +81,10 @@ export default {
   layout: 'project',
   data () {
     return {
-      gallery: {
-        src: [
-          'voidfilling/still1.jpg',
-          'voidfilling/still2.jpg'
-        ],
-        alt: [
-          'View of the artwork',
-          'View of the artwork'
-        ]
-      }
+      gallery: [
+        { src: require('~/assets/img/voidfilling/still1.jpg?original'), alt: 'View of the artwork' },
+        { src: require('~/assets/img/voidfilling/still2.jpg?original'), alt: 'View of the artwork' }
+      ]
     }
   },
   head () {

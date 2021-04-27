@@ -1,17 +1,17 @@
 <template>
-  <div class="picture-frame mborder-bottom mborder-top my-8">
+  <div class="my-8 picture-frame mborder-bottom mborder-top">
     <figure>
       <template v-if="custom">
         <slot name="customFrame" />
       </template>
       <template v-else>
         <img
-          :src="require(`~/assets/img/${src}`)"
-          :alt="title"
+          :src="source.src"
+          :alt="source.alt"
         >
       </template>
       <figcaption>
-        <h3>{{ title }}</h3>
+        <h3>{{ source.alt }}</h3>
       </figcaption>
     </figure>
   </div>
@@ -21,17 +21,16 @@
 export default {
   name: 'PictureFrame',
   props: {
-    src: {
-      type: String,
-      default: ''
-    },
-    title: {
-      type: String,
-      required: true
-    },
     custom: {
       type: Boolean,
       default: false
+    },
+    source: {
+      type: Object,
+      required: true,
+      default () {
+        return { src: require('~/assets/img/dummy.jpg'), alt: 'No alt has been inserted or the source is not valid' }
+      }
     }
   }
 }

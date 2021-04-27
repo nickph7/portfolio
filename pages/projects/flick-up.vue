@@ -26,7 +26,7 @@
     </p-text-box>
     <picture-frame
       :custom="true"
-      title="Flick Up Video"
+      :source="{ alt: 'Flick Up Video' }"
     >
       <template v-slot:customFrame>
         <div class="video-container">
@@ -42,9 +42,7 @@
     </picture-frame>
     <image-gallery
       id="flickup"
-      :src="gallery.src"
-      :alt="gallery.alt"
-      title="deprecated"
+      :source="gallery"
     />
     <mobile-projects-nav
       :prev="{
@@ -66,39 +64,19 @@ export default {
   layout: 'project',
   data () {
     return {
-      gallery: {
-        src: [
-          'fu-screenshots/1-idea.jpg',
-          'fu-screenshots/2-game changer.jpg',
-          'fu-screenshots/3-cure.jpg',
-          'fu-screenshots/4-symbol.jpg',
-          'fu-screenshots/5-knight.jpg',
-          'fu-screenshots/6-lighthouse.jpg',
-          'fu-screenshots/7-kick.jpg',
-          'fu-screenshots/8-momentum.jpg',
-          'fu-screenshots/9-time.jpg',
-          'fu-screenshots/10-flight_or_fight.jpg',
-          'fu-screenshots/11-toss.jpg'
-        ],
-        alt: [
-          'An Idea',
-          'Game Changer',
-          'A Cure',
-          'A Symbol',
-          'A weapon',
-          'A beacon',
-          'Time to kick it up',
-          'Momentum',
-          "It's time",
-          'Flight of fight',
-          'Toss'
-        ]
-      }
-    }
-  },
-  computed: {
-    alt () {
-      return Array(this.gallery.src.length).fill('Stills')
+      gallery: [
+        { src: require('~/assets/img/fu-screenshots/1-idea.jpg'), alt: 'An Idea' },
+        { src: require('~/assets/img/fu-screenshots/2-game changer.jpg'), alt: 'Game Changer' },
+        { src: require('~/assets/img/fu-screenshots/3-cure.jpg'), alt: 'A Cure' },
+        { src: require('~/assets/img/fu-screenshots/4-symbol.jpg'), alt: 'A Symbol' },
+        { src: require('~/assets/img/fu-screenshots/5-knight.jpg'), alt: 'A weapon' },
+        { src: require('~/assets/img/fu-screenshots/6-lighthouse.jpg'), alt: 'A beacon' },
+        { src: require('~/assets/img/fu-screenshots/7-kick.jpg'), alt: 'Time to kick it up' },
+        { src: require('~/assets/img/fu-screenshots/8-momentum.jpg'), alt: 'Momentum' },
+        { src: require('~/assets/img/fu-screenshots/9-time.jpg'), alt: "It's time" },
+        { src: require('~/assets/img/fu-screenshots/10-flight_or_fight.jpg'), alt: 'Flight of fight' },
+        { src: require('~/assets/img/fu-screenshots/11-toss.jpg'), alt: 'Toss' }
+      ]
     }
   },
   head () {

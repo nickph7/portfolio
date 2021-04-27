@@ -8,8 +8,8 @@
         </template>
         <!-- default image slides -->
         <template v-else>
-          <swiper-slide v-for="(img, index) in src" :key="index">
-            <img :src="require(`~/assets/img/${img}`)" :alt="alt[index]">
+          <swiper-slide v-for="(img, index) in source" :key="index">
+            <img :src="img.src" :alt="img.alt">
           </swiper-slide>
         </template>
       </swiper>
@@ -30,7 +30,7 @@
       </div>
       <div class="self-stretch flex-auto gallery-title text-mwhite font-acuminCondensed bg-mdarktwo">
         <div class="flex items-center justify-center h-full text-center">
-          <p>{{ alt[currentIndex] }}</p>
+          <p>{{ custom ? alt[currentIndex] : source[currentIndex].alt }}</p>
         </div>
       </div>
     </div>
@@ -47,22 +47,23 @@ export default {
       type: Boolean,
       default: false
     },
+    // REQUIRED TO IDENTIFY MULTIPLE GALLERIES
     id: {
       type: String,
       required: true
     },
-    src: {
+    source: {
       type: Array,
-      default () {
-        return ['dummy.jpg']
+      required: false, // if this is not custom this is required
+      default () { return [] },
+      validator (prop) {
+        return prop.every(el => 'src' in el && 'alt' in el && Object.keys(el).length === 2) && prop.length > 0
       }
     },
     alt: {
       type: Array,
-      required: true,
-      default () {
-        return ['Picture -1']
-      }
+      required: false,
+      default () { return [] }
     }
   },
   data () {
@@ -115,6 +116,7 @@ export default {
   }
 
   /* applied directly to swiper-slide inner element */
+  /* WARN: This might applied unwanted style on custom slides */
   .gallery .swiper-slide > *{
     margin: 0 auto;
     height: 100%;

@@ -32,8 +32,7 @@
         :id="gallery.id"
         :key="gallery.id"
         class="ruinism-gallery"
-        :src="gallery.src"
-        :alt="gallery.alt"
+        :source="gallery.source"
       />
     </div>
     <mobile-projects-nav
@@ -64,54 +63,34 @@ export default {
       galleries: [
         {
           id: 'earlyConcepts',
-          src: [
-            'ruinism/ruin-concept1.jpg',
-            'ruinism/ruin-concept2.jpg',
-            'ruinism/ruin-concept3.jpg'
-          ],
-          alt: [
-            'Iteration 1: Early Sketches of concepts',
-            'Iteration 1: Early Sketches of concepts',
-            'Iteration 1: Early Sketches of concepts'
+          source: [
+            { src: require('~/assets/img/ruinism/ruin-concept1.jpg'), alt: 'Iteration 1: Early Sketches of concepts' },
+            { src: require('~/assets/img/ruinism/ruin-concept2.jpg'), alt: 'Iteration 1: Early Sketches of concepts' },
+            { src: require('~/assets/img/ruinism/ruin-concept3.jpg'), alt: 'Iteration 1: Early Sketches of concepts' }
           ]
         },
         {
           id: 'digitalConcepts',
-          src: [
-            'ruinism/ruin-explo1.jpg',
-            'ruinism/ruin-explo2.jpg',
-            'ruinism/ruin-explo3.jpg',
-            'ruinism/ruin-explo4.jpg',
-            'ruinism/ruin-explo-texture.jpg'
-          ],
-          alt: [
-            'Iteration 2: Digital exploration of stronger concepts',
-            'Iteration 2: Digital exploration of stronger concepts',
-            'Iteration 2: Digital exploration of stronger concepts',
-            'Iteration 2: Digital exploration of stronger concepts',
-            'Exploration of textures for the vinyl disk stickers'
+          source: [
+            { src: require('~/assets/img/ruinism/ruin-explo1.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
+            { src: require('~/assets/img/ruinism/ruin-explo2.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
+            { src: require('~/assets/img/ruinism/ruin-explo3.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
+            { src: require('~/assets/img/ruinism/ruin-explo4.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
+            { src: require('~/assets/img/ruinism/ruin-explo-texture.jpg'), alt: 'Exploration of textures for the vinyl disk stickers' }
           ]
         },
         {
           id: 'finalRender',
-          src: [
-            'ruinism/ruin-front.jpg',
-            'ruinism/ruin-back.jpg'
-          ],
-          alt: [
-            'Final render digital',
-            'Final render digital'
+          source: [
+            { src: require('~/assets/img/ruinism/ruin-front.jpg'), alt: 'Final render digital front' },
+            { src: require('~/assets/img/ruinism/ruin-back.jpg'), alt: 'Final render digital back' }
           ]
         },
         {
           id: 'analogCover',
-          src: [
-            'ruinism/ruin-anacover-back.jpg',
-            'ruinism/ruin-anacover-front.jpg'
-          ],
-          alt: [
-            'Final render analog',
-            'Final render analog'
+          source: [
+            { src: require('~/assets/img/ruinism/ruin-anacover-back.jpg'), alt: 'Final render analog back' },
+            { src: require('~/assets/img/ruinism/ruin-anacover-front.jpg'), alt: 'Final render analog front' }
           ]
         }
       ]

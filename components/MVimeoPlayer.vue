@@ -21,7 +21,7 @@ export default {
   props: {
     // TODO: Needs to be a string (warning)
     id: {
-      type: Number,
+      type: String,
       required: true
     },
     title: {

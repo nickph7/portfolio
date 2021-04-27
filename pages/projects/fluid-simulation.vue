@@ -1,7 +1,7 @@
 <template>
   <div>
     <cover>
-      <img :src="require('~/assets/img/fluid-sim/10k-2_2x.jpg')">
+      <img :src="require('~/assets/img/fluid-sim/10k-2_2x.jpg?original')">
     </cover>
     <p-text-box>
       <template v-slot:header>
@@ -47,8 +47,7 @@
     <image-gallery
       id="fs"
       class="mborder-top"
-      :src="gallery.src"
-      :alt="gallery.alt"
+      :source="gallery"
     />
     <!-- TODO: CHANGE FLUID SIMULATION NAVIGATION -->
     <mobile-projects-nav
@@ -79,44 +78,24 @@ export default {
   layout: 'project',
   data () {
     return {
-      gallery: {
-        src: [
-          'fluid-sim/ui-view.jpg',
-          'fluid-sim/n-search1.jpg',
-          'fluid-sim/n-search2.jpg',
-          'fluid-sim/collision.jpg',
-          'fluid-sim/collision2.jpg',
-          'fluid-sim/collision3.jpg',
-          'fluid-sim/wall1.jpg',
-          'fluid-sim/wall2.jpg',
-          'fluid-sim/wall3.jpg',
-          'fluid-sim/wall4.jpg',
-          'fluid-sim/2k.jpg',
-          'fluid-sim/2k-2.jpg',
-          'fluid-sim/5k-1.jpg',
-          'fluid-sim/10k-1.jpg',
-          'fluid-sim/10k-3.jpg',
-          'fluid-sim/10k-2.jpg'
-        ],
-        alt: [
-          'Application window with changeable parameters',
-          'Testing spatial hash grid accuracy',
-          'Balls turn red if neighbour of yellow',
-          'Testing collision detection',
-          'Each walls uses cubes of the grid in front and behind them',
-          "Balls turn red as they enter the wall's field",
-          'Particles closing in...',
-          'Particles closing in...',
-          'After playing with the rest density parameters',
-          'Modifying the parameters in real time creates intricate visual effects',
-          '2,000 particles',
-          '2,000 particles',
-          '5,000 particles',
-          '10,000 particles',
-          '10,000 particles',
-          '10,000 particles'
-        ]
-      }
+      gallery: [
+        { src: require('~/assets/img/fluid-sim/ui-view.jpg?original'), alt: 'Application window with changeable parameters' },
+        { src: require('~/assets/img/fluid-sim/n-search1.jpg?original'), alt: 'Testing spatial hash grid accuracy' },
+        { src: require('~/assets/img/fluid-sim/n-search2.jpg?original'), alt: 'Balls turn red if neighbour of yellow' },
+        { src: require('~/assets/img/fluid-sim/collision.jpg?original'), alt: 'Testing collision detection' },
+        { src: require('~/assets/img/fluid-sim/collision2.jpg?original'), alt: 'Each walls uses cubes of the grid in front and behind them' },
+        { src: require('~/assets/img/fluid-sim/collision3.jpg?original'), alt: "Balls turn red as they enter the wall's field" },
+        { src: require('~/assets/img/fluid-sim/wall1.jpg?original'), alt: 'Particles closing in...' },
+        { src: require('~/assets/img/fluid-sim/wall2.jpg?original'), alt: 'Particles closing in...' },
+        { src: require('~/assets/img/fluid-sim/wall3.jpg?original'), alt: 'After playing with the rest density parameters' },
+        { src: require('~/assets/img/fluid-sim/wall4.jpg?original'), alt: 'Modifying the parameters in real time creates intricate visual effects' },
+        { src: require('~/assets/img/fluid-sim/2k.jpg?original'), alt: '2,000 particles' },
+        { src: require('~/assets/img/fluid-sim/2k-2.jpg?original'), alt: '2,000 particles' },
+        { src: require('~/assets/img/fluid-sim/5k-1.jpg?original'), alt: '5,000 particles' },
+        { src: require('~/assets/img/fluid-sim/10k-1.jpg?original'), alt: '10,000 particles' },
+        { src: require('~/assets/img/fluid-sim/10k-3.jpg?original'), alt: '10,000 particles' },
+        { src: require('~/assets/img/fluid-sim/10k-2.jpg?original'), alt: '10,000 particles' }
+      ]
     }
   },
   head () {
