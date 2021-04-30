@@ -1,10 +1,66 @@
+:root{
+  --nav-height-mob: 60px;
+  --bottom-bar-height: 47px;
+  --mdarkone: #181616;
+  --mdarktwo: #252424;
+  --mdarkthree: #4b4a4a;
+  --mgreyone: #c4c2c2;
+  --mgreytwo: #dcdada;
+  --mwhite: #f7f3f3;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+  }
+
+  body {
+    background-color: var(--mdarktwo);
+  }
+}
+
+/*# GLOBAL COMPONENTS #*/
 @layer components {
+
+  /* Layout */
+  .main-container{
+    margin-top: var(--nav-height-mob);
+    min-height: calc(100vh - var(--nav-height-mob) - 3rem);
+  }
+
+  /* Elements */
   .tiny-arrow{
     @apply text-xs bg-mwhite rounded-sm mr-1 text-mdarktwo;
     padding: 1px 0;
+  }
+}
+
+/*# UTILITIES */
+@layer utilities {
+  .border-t{
+    border-top: 1px solid var(--mdarkthree);
+  }
+  .border-b{
+    border-bottom: 1px solid var(--mdarkthree);
+  }
+  .border-l{
+    border-left: 1px solid var(--mdarkthree);
+  }
+  .border-r{
+    border-right: 1px solid var(--mdarkthree);
+  }
+  .border-x{
+    border-top: 1px solid var(--mdarkthree);
+    border-bottom: 1px solid var(--mdarkthree);
+  }
+  .border-y{
+    border-left: 1px solid var(--mdarkthree);
+    border-right: 1px solid var(--mdarkthree);
   }
 }

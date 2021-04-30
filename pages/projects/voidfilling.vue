@@ -41,12 +41,10 @@
         Twitter's API for collecting social media activity.
       </p>
     </p-text-box>
-    <!-- TODO: Change ID -->
-    <m-vimeo-player :id="501028450" title="Voidfilling Demo" />
-    <!-- TODO: Change Images -->
+    <m-vimeo-player id="501028450" title="Voidfilling Demo" />
     <image-gallery
       id="vf"
-      class="mborder-top"
+      class="border-t"
       :source="gallery"
     />
     <mobile-projects-nav

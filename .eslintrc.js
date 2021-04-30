@@ -13,5 +13,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'vue/no-unused-components': process.env.NODE_ENV === 'production' ? 'error' : 'warn'
   }
 }

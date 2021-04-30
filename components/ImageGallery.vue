@@ -1,5 +1,9 @@
 <template>
   <div class="gallery-wrapper">
+    <!-- TODO: fix this title too-->
+    <title-bar>
+      <h3>Test title</h3>
+    </title-bar>
     <client-only>
       <swiper ref="imageGallery" class="swiper gallery" :options="gallerySwiperOptions">
         <!-- custom slides -->
@@ -9,7 +13,7 @@
         <!-- default image slides -->
         <template v-else>
           <swiper-slide v-for="(img, index) in source" :key="index">
-            <img :src="img.src" :alt="img.alt">
+            <img :src="img.src" :alt="img.alt" class="gallery-img">
           </swiper-slide>
         </template>
       </swiper>
@@ -22,7 +26,7 @@
         </m-button>
         <div
           :class="id + 'gallery-swiper-fract'"
-          class="self-center px-4 text-center gal-fract text-mwhite font-acuminXcondensed"
+          class="self-center text-center text-mwhite font-acuminXcondensed"
         />
         <m-button :class="id + 'gallery-swiper-next'" class="gal-button gal-prev" :size="buttonSize">
           <i class="icon-right-dir" />
@@ -39,9 +43,10 @@
 
 <script>
 import MButton from '~/components/MButton'
+import TitleBar from '~/components/TitleBar'
 export default {
   name: 'ImageGallery',
-  components: { MButton },
+  components: { TitleBar, MButton },
   props: {
     custom: {
       type: Boolean,
@@ -108,19 +113,24 @@ export default {
     background-color: var(--mdarkone);
   }
 
+  .swiper-wrapper {
+    align-items: center;
+  }
+
   /* Overrides swiper-slide height: 100% */
   /* Class applied on swiper-slide el (CHANGE SO DON"T NEED TO APPLY IT TO ELEMENTS)*/
-  .gallery .swiper-slide {
+  /* .gallery .swiper-slide {
     height: auto;
     min-height: 45vh;
-  }
+  } */
 
   /* applied directly to swiper-slide inner element */
   /* WARN: This might applied unwanted style on custom slides */
   .gallery .swiper-slide > *{
     margin: 0 auto;
-    height: 100%;
+    /* height: 100%; */
     max-height:70vh;
+    min-height: 45vh;
     object-fit: contain;
   }
 
@@ -139,7 +149,6 @@ export default {
     display: flex;
     align-items: center;
     border-top: 1px solid var(--mdarkthree);
-    height: 50px;
   }
 
   .gal-controls{

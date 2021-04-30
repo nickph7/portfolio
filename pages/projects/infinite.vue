@@ -30,7 +30,7 @@
     </p-text-box>
     <image-gallery
       :id="galleries[0].id"
-      class="mborder-bottom"
+      class="border-b"
       :source="galleries[0].source"
     />
     <p-text-box>
@@ -81,8 +81,6 @@
 </template>
 
 <script>
-// TODO: Videos are not played on mobile.
-
 import Cover from '~/components/Cover'
 import PTextBox from '~/components/PTextBox'
 import ImageGallery from '~/components/ImageGallery'

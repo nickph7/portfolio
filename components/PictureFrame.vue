@@ -1,5 +1,5 @@
 <template>
-  <div class="my-8 picture-frame mborder-bottom mborder-top">
+  <div class="my-8 border-b border-t">
     <figure>
       <template v-if="custom">
         <slot name="customFrame" />
@@ -8,6 +8,7 @@
         <img
           :src="source.src"
           :alt="source.alt"
+          class="p-12 bg-mdarkone"
         >
       </template>
       <figcaption>
@@ -38,7 +39,7 @@ export default {
 
 <style scoped lang="postcss">
 
-  .picture-frame figcaption{
+  figcaption{
     @apply text-center font-acuminCondensed text-mwhite my-4;
   }
 

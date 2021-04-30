@@ -44,12 +44,12 @@
       </p>
     </p-text-box>
     <m-vimeo-player id="488361910" title="Evolution of my fluid solver" />
+    <!-- <div class="w-full h-1 bg-mdarkone" style="background-color: black;" /> -->
     <image-gallery
       id="fs"
-      class="mborder-top"
+      class="border-t"
       :source="gallery"
     />
-    <!-- TODO: CHANGE FLUID SIMULATION NAVIGATION -->
     <mobile-projects-nav
       :next="{
         link: '/projects/voidfilling',

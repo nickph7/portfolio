@@ -41,7 +41,7 @@
     </p-text-box>
     <image-gallery
       id="youtube-gallery"
-      class="mborder-bottom mborder-top"
+      class="border-b border-t"
       :custom="true"
       :alt="youtubeAlts"
     >
