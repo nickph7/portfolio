@@ -12,7 +12,7 @@
         </template>
         <!-- default image slides -->
         <template v-else>
-          <swiper-slide v-for="(img, index) in source" :key="index">
+          <swiper-slide v-for="(img, index) in source" :key="index" class="img-slide">
             <img :src="img.src" :alt="img.alt" class="gallery-img">
           </swiper-slide>
         </template>
@@ -60,10 +60,7 @@ export default {
     source: {
       type: Array,
       required: false, // if this is not custom this is required
-      default () { return [] },
-      validator (prop) {
-        return prop.every(el => 'src' in el && 'alt' in el && Object.keys(el).length === 2) && prop.length > 0
-      }
+      default () { return [] }
     },
     alt: {
       type: Array,
@@ -75,8 +72,18 @@ export default {
     return {
       currentIndex: 0,
       gallerySwiperOptions: {
+        slidesPerView: 1,
+        spaceBetween: 10,
         allowTouchMove: false,
         centeredSlides: true,
+        normalizeSlideIndex: false,
+        init: false,
+        breakpoints: {
+          1280: {
+            slidesPerView: 'auto',
+            spaceBetween: 60
+          }
+        },
         pagination: {
           el: '.' + this.id + 'gallery-swiper-fract',
           type: 'fraction'
@@ -86,20 +93,34 @@ export default {
           prevEl: '.' + this.id + 'gallery-swiper-prev'
         },
         on: {
-          init: () => {
-            setTimeout(() => {
-              window.dispatchEvent(new Event('resize'))
-            }, 200)
-          },
           slideChange: () => {
-            this.currentIndex = this.$refs.imageGallery.$swiper.activeIndex
+            if (this.$refs.imageGallery.$swiper !== undefined) {
+              this.currentIndex = this.$refs.imageGallery.$swiper.activeIndex
+            }
           }
         }
       },
       buttonSize: 40
     }
+  },
+  computed: {
+    swiper () {
+      return this.$refs.imageGallery.$swiper
+    }
+  },
+  mounted () {
+    const interval = setInterval(() => {
+      if (this.$refs.imageGallery) {
+        this.swiper.init()
+        clearInterval(interval)
+      }
+    }, 50)
   }
 }
+
+// validator (prop) {
+//   return prop.every(el => 'src' in el && 'alt' in el && Object.keys(el).length === 2) && prop.length > 0
+// }
 </script>
 
 <style>
@@ -117,24 +138,22 @@ export default {
     align-items: center;
   }
 
-  /* Overrides swiper-slide height: 100% */
-  /* Class applied on swiper-slide el (CHANGE SO DON"T NEED TO APPLY IT TO ELEMENTS)*/
-  /* .gallery .swiper-slide {
-    height: auto;
-    min-height: 45vh;
-  } */
-
   /* applied directly to swiper-slide inner element */
   /* WARN: This might applied unwanted style on custom slides */
   .gallery .swiper-slide > *{
     margin: 0 auto;
-    /* height: 100%; */
     max-height:70vh;
     min-height: 45vh;
     object-fit: contain;
   }
 
-  /* Gallery navigation */
+  @media (min-width: 1280px){
+    .gallery .swiper-slide.img-slide {
+      width: auto !important;
+    }
+  }
+
+  /* SWIPER NAVIGATION */
   .gal-next{
     border-right: 1px solid var(--mdarkthree);
   }

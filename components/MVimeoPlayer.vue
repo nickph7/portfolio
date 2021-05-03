@@ -19,7 +19,6 @@
           />
         </div>
       </div>
-      <!-- TODO: what to do with this text? Suggestion: fetch video title and put it above and keep the title at the bottom -->
       <div class="my-4 text-center text-mwhite font-acuminCondensed">
         <h3>{{ title }}</h3>
       </div>
@@ -66,9 +65,9 @@ export default {
       Promise.all([myPlayer.getVideoWidth(), myPlayer.getVideoHeight()]).then((dimensions) => {
         const width = dimensions[0]
         const height = dimensions[1]
-        // console.log(`Video has width: ${width}, and height: ${height}`)
-        this.aspectRatio = (height / width) * 100
-        this.wrapperMaxWidth = (width / height) * 68
+
+        this.aspectRatio = (height / width) * 100 // Goes to vimeo-player -> padding-top
+        this.wrapperMaxWidth = (width / height) * 68 // Goes to inner-wrapper -> max-width
       })
     }
   }
@@ -76,7 +75,7 @@ export default {
 </script>
 
 <style>
-/* NOT SCOPED to reach iframe*/
+/* NOT SCOPED to reach iframe */
 
 .inner-wrapper{
   margin: 0 auto;

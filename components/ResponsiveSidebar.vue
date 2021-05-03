@@ -65,11 +65,6 @@ export default {
     margin-bottom: 1rem;
   }
 
-  .index-link--text{
-    @apply pl-2;
-    vertical-align: -1.5pt;
-  }
-
   .responsive-sidebar--link {
     /*@apply border border-solid border-gray-500;*/
     @apply text-center py-2 mb-1;

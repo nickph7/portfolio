@@ -47,26 +47,32 @@
     >
       <template v-slot:customSlides>
         <swiper-slide class="gallery-slide">
-          <iframe
-            width="560"
-            height="315"
-            class="gallery-img youtube-iframe"
-            src="https://www.youtube.com/embed/UwcoFXKnpOw"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
+          <div class="inner-wrapper">
+            <div class="youtube-player">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/UwcoFXKnpOw"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+          </div>
         </swiper-slide>
         <swiper-slide class="gallery-slide">
-          <iframe
-            width="560"
-            height="315"
-            class="gallery-img youtube-iframe"
-            src="https://www.youtube.com/embed/alJGOYO-9xU"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
+          <div class="inner-wrapper">
+            <div class="youtube-player">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/alJGOYO-9xU"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+          </div>
         </swiper-slide>
       </template>
     </image-gallery>
@@ -125,10 +131,22 @@ export default {
 </script>
 
 <style scoped>
-.youtube-iframe{
+.inner-wrapper{
+  margin: 0 auto;
+  max-width: 120vh;
+}
+
+.youtube-player{
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.youtube-player iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  /* 100% of container - the height of the title bar */
-  /* TODO: Fix the youtube iframes */
-  height: calc(100% - 39px);
+  height: 100%;
 }
 </style>

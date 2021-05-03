@@ -26,10 +26,6 @@
         quality of Howard's composition.
       </p>
     </p-text-box>
-    <div class="flex flex-row w-full min-w-0 my-12">
-      <img src="~/assets/img/ruinism/ruin-concept1.jpg" class="w-1/2">
-      <img src="~/assets/img/ruinism/ruin-concept2.jpg" class="w-1/2">
-    </div>
     <div class="ruinism-galleries">
       <image-gallery
         v-for="gallery in galleries"
