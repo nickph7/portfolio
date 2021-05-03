@@ -30,8 +30,9 @@
     </p-text-box>
     <image-gallery
       :id="galleries[0].id"
-      class="border-b"
+      class="border-b border-t"
       :source="galleries[0].source"
+      title="Design Mock Ups"
     />
     <p-text-box>
       <p class="text">
@@ -53,8 +54,10 @@
     </p-text-box>
     <image-gallery
       :id="galleries[1].id"
+      class="border-t"
       :custom="true"
       :alt="galleries[1].alt"
+      title="Demo Snapshots"
     >
       <template v-slot:customSlides>
         <!-- eslint-disable-next-line vue/valid-v-for -->
@@ -96,8 +99,8 @@ export default {
         {
           id: 'mockup',
           source: [
-            { src: require('~/assets/img/infinite/mockup1.jpg'), alt: 'Some Mock ups for the website - project page' },
-            { src: require('~/assets/img/infinite/mockup2.jpg'), alt: 'Some Mock ups for the website - project list' },
+            { src: require('~/assets/img/infinite/mockup1.jpg'), alt: 'Mock up for the project page' },
+            { src: require('~/assets/img/infinite/mockup2.jpg'), alt: 'Mock up for the project list' },
             { src: require('~/assets/img/infinite/mockup3.jpg'), alt: 'another project page option with split view of process and final' }
           ]
         },

@@ -32,6 +32,7 @@
       id="m4b"
       class="border-t"
       :source="gallery"
+      title="Machine to hang with birds demo"
     />
     <mobile-projects-nav
       :prev="{

@@ -67,12 +67,16 @@ export default {
 
   .responsive-sidebar--link {
     /*@apply border border-solid border-gray-500;*/
-    @apply text-center py-2 mb-1;
+    @apply text-center py-2 mb-1 text-mgreyone;
+  }
+
+  .responsive-sidebar--link a:hover {
+    @apply text-mwhite;
+    border-bottom: 1px solid var(--mwhite);
   }
 
   .responsive-sidebar--link .nuxt-link-active {
-    font-weight: 700;
-    border-bottom: 2px solid white;
+    @apply text-mwhite font-bold;
   }
 
   @media screen and (min-width: 1024px){

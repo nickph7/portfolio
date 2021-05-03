@@ -46,6 +46,7 @@
       id="vf"
       class="border-t"
       :source="gallery"
+      title="Artwork Stills"
     />
     <mobile-projects-nav
       :prev="{

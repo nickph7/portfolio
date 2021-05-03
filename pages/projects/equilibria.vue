@@ -1,6 +1,7 @@
 <template>
   <div class="">
     <cover>
+      <!-- TODO: Require an alt -->
       <img src="~/assets/img/equilibria/eq-fullview2.jpg">
     </cover>
     <p-text-box class="p-4 text-box">
@@ -48,6 +49,7 @@
       class="border-t border-b"
       :custom="true"
       :alt="youtubeAlts"
+      title="Project Demos"
     >
       <template v-slot:customSlides>
         <swiper-slide class="gallery-slide">
@@ -85,6 +87,7 @@
       id="equilibria"
       class=""
       :source="gallery"
+      title="Process Photos"
     />
     <mobile-projects-nav
       :prev="{

@@ -49,6 +49,7 @@
       id="fs"
       class="border-t"
       :source="gallery"
+      title="Process Photos"
     />
     <mobile-projects-nav
       :next="{

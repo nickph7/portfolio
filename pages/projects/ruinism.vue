@@ -33,6 +33,7 @@
         :key="gallery.id"
         class="ruinism-gallery"
         :source="gallery.source"
+        :title="gallery.title"
       />
     </div>
     <mobile-projects-nav
@@ -63,6 +64,7 @@ export default {
       galleries: [
         {
           id: 'earlyConcepts',
+          title: 'Iteration 1',
           source: [
             { src: require('~/assets/img/ruinism/ruin-concept1.jpg'), alt: 'Iteration 1: Early Sketches of concepts' },
             { src: require('~/assets/img/ruinism/ruin-concept2.jpg'), alt: 'Iteration 1: Early Sketches of concepts' },
@@ -71,6 +73,7 @@ export default {
         },
         {
           id: 'digitalConcepts',
+          title: 'Iteration 2',
           source: [
             { src: require('~/assets/img/ruinism/ruin-explo1.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
             { src: require('~/assets/img/ruinism/ruin-explo2.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
@@ -81,6 +84,7 @@ export default {
         },
         {
           id: 'finalRender',
+          title: 'Final Version Digital',
           source: [
             { src: require('~/assets/img/ruinism/ruin-front.jpg'), alt: 'Final render digital front' },
             { src: require('~/assets/img/ruinism/ruin-back.jpg'), alt: 'Final render digital back' }
@@ -88,6 +92,7 @@ export default {
         },
         {
           id: 'analogCover',
+          title: 'Final Version Printed',
           source: [
             { src: require('~/assets/img/ruinism/ruin-anacover-back.jpg'), alt: 'Final render analog back' },
             { src: require('~/assets/img/ruinism/ruin-anacover-front.jpg'), alt: 'Final render analog front' }
@@ -105,6 +110,10 @@ export default {
 </script>
 
 <style scoped>
+.ruinism-galleries .ruinism-gallery:first-child{
+  border-top: 1px solid var(--mdarkthree);
+}
+
 .ruinism-galleries .ruinism-gallery:not(:last-child){
   border-bottom: 1px solid var(--mdarkthree);
 }

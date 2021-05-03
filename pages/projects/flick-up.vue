@@ -41,6 +41,7 @@
     <image-gallery
       id="flickup"
       :source="gallery"
+      title="Frames Illustrations"
     />
     <mobile-projects-nav
       :prev="{

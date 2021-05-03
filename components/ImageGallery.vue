@@ -2,7 +2,7 @@
   <div class="gallery-wrapper">
     <!-- TODO: fix this title too-->
     <title-bar>
-      <h3>Test title</h3>
+      <h3>{{ title }}</h3>
     </title-bar>
     <client-only>
       <swiper ref="imageGallery" class="swiper gallery" :options="gallerySwiperOptions">
@@ -54,6 +54,10 @@ export default {
     },
     // REQUIRED TO IDENTIFY MULTIPLE GALLERIES
     id: {
+      type: String,
+      required: true
+    },
+    title: {
       type: String,
       required: true
     },

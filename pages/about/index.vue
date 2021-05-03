@@ -9,13 +9,13 @@
       <div>
         <img src="~/assets/img/shot.jpg" alt="portrait" class="portrait sm:float-left">
         <p>
-          Currently based in Montreal, I focus on creating sensational and experimental software and artworks. I am a jack-of-all
-          trades, and have sharpenened my skills in multiple areas such as audiovisual production, post-production, multimedia and
-          web programming. I strive to make projects that redefine the boundaries of how we experience the web and multimedia,
-          using cutting edge technologies and innovative practices to create truly unique and memorable experiences. Outside of
-          work, I am DJ and musician passionate about acoustic and sound system culture, and have built with my group HiFive our
-          own sound system which is quickly gaining visibility. If you are interested in the stuff I do, I would love to have a
-          chat.
+          Currently based in Montreal, I focus on creating sensational and experimental software and artworks. I am a
+          jack-of-all-trades and have sharpened my skills in multiple areas, such as audiovisual production,
+          post-production, multimedia, and web programming. Using cutting-edge technologies and innovative practices, I
+          strive to work on projects pushing the boundaries of the web and multimedia to create truly unique and
+          memorable experiences. Outside of work, I am DJ and musician passionate about acoustic and sound system
+          culture and have built with my group HiFive our own sound system, which is quickly gaining visibility. If you
+          are interested in the stuff I do, I would love to have a chat.
         </p>
       </div>
       <div class="contact-info-box py-4">
@@ -133,7 +133,7 @@ export default {
     }
   }
 
-  @media (min-width: 767px) {
+  @media (min-width: 1024px) {
     .portrait{
       width: 35%;
     }
