@@ -25,6 +25,16 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px'
+    },
+    extend: {
+      height: {
+        'screen-1/2': '50vh',
+        'screen-3/4': '75vh'
+      },
+      maxHeight: {
+        'screen-1/2': '50vh',
+        'screen-3/4': '75vh'
+      }
     }
   },
   variants: {},

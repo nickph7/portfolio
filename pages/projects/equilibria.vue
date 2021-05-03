@@ -24,9 +24,13 @@
         ecosystem and hopes to develop an awareness of their own finite reality.
       </p>
     </p-text-box>
-    <picture-frame
-      :source="{ src: require('~/assets/img/equilibria/eq-fullview.jpg'), alt: 'Full view of the structure' }"
-    />
+    <picture-frame description="Full view of the structure">
+      <img
+        :src="require('~/assets/img/equilibria/eq-fullview.jpg')"
+        alt="Full view of the structure"
+        class="object-contain py-0 mx-auto max-h-screen-3/4 lg:py-12"
+      >
+    </picture-frame>
     <p-text-box>
       <p class="text">
         For this project, I was tasked to design and build the central structure, and program our interactive branches
@@ -41,7 +45,7 @@
     </p-text-box>
     <image-gallery
       id="youtube-gallery"
-      class="border-b border-t"
+      class="border-t border-b"
       :custom="true"
       :alt="youtubeAlts"
     >

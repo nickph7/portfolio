@@ -1,18 +1,11 @@
 <template>
-  <div class="my-8 border-b border-t">
+  <div class="border-b border-t">
     <figure>
-      <template v-if="custom">
-        <slot name="customFrame" />
-      </template>
-      <template v-else>
-        <img
-          :src="source.src"
-          :alt="source.alt"
-          class="p-12 bg-mdarkone"
-        >
-      </template>
+      <div class="bg-mdarkone">
+        <slot />
+      </div>
       <figcaption>
-        <h3>{{ source.alt }}</h3>
+        <h3>{{ description }}</h3>
       </figcaption>
     </figure>
   </div>
@@ -22,16 +15,9 @@
 export default {
   name: 'PictureFrame',
   props: {
-    custom: {
-      type: Boolean,
-      default: false
-    },
-    source: {
-      type: Object,
-      required: true,
-      default () {
-        return { src: require('~/assets/img/dummy.jpg'), alt: 'No alt has been inserted or the source is not valid' }
-      }
+    description: {
+      type: String,
+      required: true
     }
   }
 }
