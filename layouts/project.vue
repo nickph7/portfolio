@@ -27,9 +27,5 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-/* @media screen and (min-width: 1024px) {
-    .content {
-      width: 75%;
-    }
-} */
+
 </style>

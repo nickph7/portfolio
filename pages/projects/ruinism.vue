@@ -1,7 +1,13 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/ruinism/ruin-cover.jpg" alt="cover">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/ruinism/ruin-cover.jpg')"
+          :data-loading="require('~/assets/img/ruinism/ruin-cover.jpg?lqip')"
+          alt="Ruinism project cover"
+        >
+      </div>
     </cover>
     <p-text-box>
       <template v-slot:header>

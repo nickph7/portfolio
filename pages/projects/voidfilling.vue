@@ -1,7 +1,13 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/voidfilling/still2_2x.jpg">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/voidfilling/still2_2x.jpg?original')"
+          :data-loading="require('~/assets/img/voidfilling/still2_2x.jpg?lqip')"
+          alt="Voidfilling project cover"
+        >
+      </div>
     </cover>
     <p-text-box>
       <template v-slot:header>

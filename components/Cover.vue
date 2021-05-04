@@ -14,4 +14,8 @@ export default {
     object-fit: cover;
     width: 100%;
   }
+
+  .cover img[lazy='loading'] {
+    filter: blur(15px);
+  }
 </style>

@@ -1,7 +1,13 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/infinite/cover.jpg" alt="In.finite cover">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/infinite/cover.jpg')"
+          :data-loading="require('~/assets/img/infinite/cover.jpg?lqip')"
+          alt="Infinite project cover"
+        >
+      </div>
     </cover>
     <p-text-box>
       <template v-slot:header>

@@ -34,7 +34,9 @@
       </div>
       <div class="self-stretch flex-auto gallery-title text-mwhite font-acuminCondensed bg-mdarktwo">
         <div class="flex items-center justify-center h-full text-center">
-          <p>{{ custom ? alt[currentIndex] : source[currentIndex].alt }}</p>
+          <p class="gallery-title__text">
+            {{ custom ? alt[currentIndex] : source[currentIndex].alt }}
+          </p>
         </div>
       </div>
     </div>
@@ -184,5 +186,12 @@ export default {
   .gallery-title{
     font-size: 0.875rem;
     line-height: 1.2;
+  }
+
+  /* Offset text to the middle for auto slide */
+  @media (min-width: 1280px){
+    .gallery-title__text{
+      transform: translateX(-70px);
+    }
   }
 </style>

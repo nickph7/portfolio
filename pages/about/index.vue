@@ -20,7 +20,7 @@
       </div>
       <div class="contact-info-box py-4">
         <i class="icon-download tiny-arrow presentation-icon" />
-        <a class="ext-link" href="/CV_2020_NicolasPrudhomme.pdf" download>Download My CV</a>
+        <a class="ext-link" href="/CV_2021_NicolasPrudhomme.pdf" download>Download My CV</a>
         <i class="icon-right tiny-arrow presentation-icon" />
         <nuxt-link class="ext-link" to="/about/artist-statement">
           Official Artist Statement
@@ -63,7 +63,12 @@
 import PTextBox from '~/components/PTextBox'
 export default {
   name: 'Index',
-  components: { PTextBox }
+  components: { PTextBox },
+  head () {
+    return {
+      title: 'About Me'
+    }
+  }
 }
 </script>
 
@@ -111,7 +116,7 @@ export default {
     justify-self: end;
   }
 
-  @media screen and (min-width: 767px){
+  @media screen and (min-width: 768px){
     .about-presentation--title{
       font-size: 4rem;
     }

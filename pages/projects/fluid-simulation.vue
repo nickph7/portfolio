@@ -1,7 +1,14 @@
 <template>
   <div>
     <cover>
-      <img :src="require('~/assets/img/fluid-sim/10k-2_2x.jpg?original')">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/fluid-sim/10k-2_2x.jpg?original')"
+          :data-loading="require('~/assets/img/fluid-sim/10k-2_2x.jpg?lqip')"
+          alt="Fluid simulation project cover"
+        >
+      </div>
+      <!--      <img :src="require('~/assets/img/fluid-sim/10k-2_2x.jpg?original')">-->
     </cover>
     <p-text-box>
       <template v-slot:header>

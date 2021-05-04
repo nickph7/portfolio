@@ -1,7 +1,13 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/stupefiant/stupefiant_final_cover.jpg">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/stupefiant/stupefiant_final_cover.jpg')"
+          :data-loading="require('~/assets/img/stupefiant/stupefiant_final_cover.jpg?lqip')"
+          alt="Stupefiant project cover"
+        >
+      </div>
     </cover>
     <p-text-box>
       <template v-slot:header>

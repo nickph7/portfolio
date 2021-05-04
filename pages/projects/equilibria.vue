@@ -1,8 +1,13 @@
 <template>
   <div class="">
     <cover>
-      <!-- TODO: Require an alt -->
-      <img src="~/assets/img/equilibria/eq-fullview2.jpg">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/equilibria/eq-fullview2.jpg')"
+          :data-loading="require('~/assets/img/equilibria/eq-fullview2.jpg?lqip')"
+          alt="Equilibria project cover"
+        >
+      </div>
     </cover>
     <p-text-box class="p-4 text-box">
       <template v-slot:header>
@@ -141,6 +146,7 @@ export default {
 .inner-wrapper{
   margin: 0 auto;
   max-width: 120vh;
+  min-height: unset;
 }
 
 .youtube-player{
