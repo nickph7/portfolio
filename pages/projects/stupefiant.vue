@@ -1,7 +1,13 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/stupefiant/stupefiant_final_cover.jpg">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/stupefiant/stupefiant_final_cover.jpg')"
+          :data-loading="require('~/assets/img/stupefiant/stupefiant_final_cover.jpg?lqip')"
+          alt="Stupefiant project cover"
+        >
+      </div>
     </cover>
     <p-text-box>
       <template v-slot:header>
@@ -19,10 +25,10 @@
         Stupéfiant is a series of three audiovisual compositions exploring the different faces of substance intoxication and its ramifications on modern societies. It aims to abstractly depict the experiences of mind-altering substance consumptions and dress a contrasting portrait which highlights both the negative and positive aspects of alcohol and drug uses. These three compositions are based on three alcoholic beverages, each having their own narratives and tackling different aspect linked to alcohol and drug consumption. These three beverages are Rosé Wine, which represents the social and agreeable aspect of mild intoxication in social contexts, Whiskey, which pictures the darker aspect of alcohol and drug abuse and the hardship associated with withdrawal symptoms and other undesirable side-effects, and finally Absinthe, which depicts an intense and psychedelic journey.
       </p>
     </p-text-box>
-    <m-vimeo-player :id="412561683" title="Rosé Wine Visuals" />
-    <m-vimeo-player :id="412561942" title="Rosé Wine Visuals: Music clips are chosen randomly" />
-    <m-vimeo-player :id="412561380" title="Whiskey Visuals" />
-    <m-vimeo-player :id="412560280" title="Absinthe Visuals" />
+    <m-vimeo-player id="412561683" title="Rosé Wine Visuals" />
+    <m-vimeo-player id="412561942" title="Rosé Wine Visuals: Music clips are chosen randomly" />
+    <m-vimeo-player id="412561380" title="Whiskey Visuals" />
+    <m-vimeo-player id="412560280" title="Absinthe Visuals" />
     <mobile-projects-nav
       :prev="{
         link: '/projects/voidfilling',

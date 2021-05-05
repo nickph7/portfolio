@@ -1,7 +1,13 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/ruinism/ruin-cover.jpg" alt="cover">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/ruinism/ruin-cover.jpg')"
+          :data-loading="require('~/assets/img/ruinism/ruin-cover.jpg?lqip')"
+          alt="Ruinism project cover"
+        >
+      </div>
     </cover>
     <p-text-box>
       <template v-slot:header>
@@ -26,14 +32,14 @@
         quality of Howard's composition.
       </p>
     </p-text-box>
-    <div class="galleries">
+    <div class="ruinism-galleries">
       <image-gallery
         v-for="gallery in galleries"
         :id="gallery.id"
         :key="gallery.id"
-        class="gallery"
-        :src="gallery.src"
-        :alt="gallery.alt"
+        class="ruinism-gallery"
+        :source="gallery.source"
+        :title="gallery.title"
       />
     </div>
     <mobile-projects-nav
@@ -64,54 +70,38 @@ export default {
       galleries: [
         {
           id: 'earlyConcepts',
-          src: [
-            'ruinism/ruin-concept1.jpg',
-            'ruinism/ruin-concept2.jpg',
-            'ruinism/ruin-concept3.jpg'
-          ],
-          alt: [
-            'Iteration 1: Early Sketches of concepts',
-            'Iteration 1: Early Sketches of concepts',
-            'Iteration 1: Early Sketches of concepts'
+          title: 'Iteration 1',
+          source: [
+            { src: require('~/assets/img/ruinism/ruin-concept1.jpg'), alt: 'Iteration 1: Early Sketches of concepts' },
+            { src: require('~/assets/img/ruinism/ruin-concept2.jpg'), alt: 'Iteration 1: Early Sketches of concepts' },
+            { src: require('~/assets/img/ruinism/ruin-concept3.jpg'), alt: 'Iteration 1: Early Sketches of concepts' }
           ]
         },
         {
           id: 'digitalConcepts',
-          src: [
-            'ruinism/ruin-explo1.jpg',
-            'ruinism/ruin-explo2.jpg',
-            'ruinism/ruin-explo3.jpg',
-            'ruinism/ruin-explo4.jpg',
-            'ruinism/ruin-explo-texture.jpg'
-          ],
-          alt: [
-            'Iteration 2: Digital exploration of stronger concepts',
-            'Iteration 2: Digital exploration of stronger concepts',
-            'Iteration 2: Digital exploration of stronger concepts',
-            'Iteration 2: Digital exploration of stronger concepts',
-            'Exploration of textures for the vinyl disk stickers'
+          title: 'Iteration 2',
+          source: [
+            { src: require('~/assets/img/ruinism/ruin-explo1.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
+            { src: require('~/assets/img/ruinism/ruin-explo2.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
+            { src: require('~/assets/img/ruinism/ruin-explo3.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
+            { src: require('~/assets/img/ruinism/ruin-explo4.jpg'), alt: 'Iteration 2: Digital exploration of stronger concepts' },
+            { src: require('~/assets/img/ruinism/ruin-explo-texture.jpg'), alt: 'Exploration of textures for the vinyl disk stickers' }
           ]
         },
         {
           id: 'finalRender',
-          src: [
-            'ruinism/ruin-front.jpg',
-            'ruinism/ruin-back.jpg'
-          ],
-          alt: [
-            'Final render digital',
-            'Final render digital'
+          title: 'Final Version Digital',
+          source: [
+            { src: require('~/assets/img/ruinism/ruin-front.jpg'), alt: 'Final render digital front' },
+            { src: require('~/assets/img/ruinism/ruin-back.jpg'), alt: 'Final render digital back' }
           ]
         },
         {
           id: 'analogCover',
-          src: [
-            'ruinism/ruin-anacover-back.jpg',
-            'ruinism/ruin-anacover-front.jpg'
-          ],
-          alt: [
-            'Final render analog',
-            'Final render analog'
+          title: 'Final Version Printed',
+          source: [
+            { src: require('~/assets/img/ruinism/ruin-anacover-back.jpg'), alt: 'Final render analog back' },
+            { src: require('~/assets/img/ruinism/ruin-anacover-front.jpg'), alt: 'Final render analog front' }
           ]
         }
       ]
@@ -126,7 +116,11 @@ export default {
 </script>
 
 <style scoped>
-.galleries .gallery:not(:last-child){
+.ruinism-galleries .ruinism-gallery:first-child{
+  border-top: 1px solid var(--mdarkthree);
+}
+
+.ruinism-galleries .ruinism-gallery:not(:last-child){
   border-bottom: 1px solid var(--mdarkthree);
 }
 </style>

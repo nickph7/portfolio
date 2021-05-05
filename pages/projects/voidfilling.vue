@@ -1,7 +1,13 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/voidfilling/still2_2x.jpg">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/voidfilling/still2_2x.jpg?original')"
+          :data-loading="require('~/assets/img/voidfilling/still2_2x.jpg?lqip')"
+          alt="Voidfilling project cover"
+        >
+      </div>
     </cover>
     <p-text-box>
       <template v-slot:header>
@@ -29,7 +35,7 @@
         manifests itself as a conspicuous void.
       </p>
       <p>
-        VoidFilling is a generative artwork made of a low-poly human head,
+        VoidFilling is a generative artwork consisting of a low-poly human head,
         rendered with lines and sprawling pixels, sitting in a cloud of tweets.
         Tracking the activity on social media, the particles activate parts of
         the model's mesh, depicting our human quest to fill the void
@@ -38,17 +44,15 @@
         state, representing that our attempt to fulfill our need for real
         communication is non-lasting and futile. For this project, we used
         TouchDesigner to create the generative visuals and Python with
-        Twitter's API for collecting social media activity.
+        Twitter's API for collecting and managing social media data.
       </p>
     </p-text-box>
-    <!-- TODO: Change ID -->
-    <m-vimeo-player :id="501028450" title="Voidfilling Demo" />
-    <!-- TODO: Change Images-->
+    <m-vimeo-player id="501028450" title="Voidfilling Demo" />
     <image-gallery
       id="vf"
-      class="mborder-top"
-      :src="gallery.src"
-      :alt="gallery.alt"
+      class="border-t"
+      :source="gallery"
+      title="Artwork Stills"
     />
     <mobile-projects-nav
       :prev="{
@@ -82,16 +86,10 @@ export default {
   layout: 'project',
   data () {
     return {
-      gallery: {
-        src: [
-          'voidfilling/still1.jpg',
-          'voidfilling/still2.jpg'
-        ],
-        alt: [
-          'View of the artwork',
-          'View of the artwork'
-        ]
-      }
+      gallery: [
+        { src: require('~/assets/img/voidfilling/still1.jpg?original'), alt: 'View of the artwork' },
+        { src: require('~/assets/img/voidfilling/still2.jpg?original'), alt: 'View of the artwork' }
+      ]
     }
   },
   head () {

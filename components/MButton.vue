@@ -1,5 +1,5 @@
 <template>
-  <div class="btn" :style="{width: size + 'px', height: size + 'px'}" @click="onClick">
+  <div class="btn" @click="onClick">
     <div class="content">
       <slot>?</slot>
     </div>
@@ -14,11 +14,6 @@ export default {
       type: Function,
       required: false,
       default () {}
-    },
-    size: {
-      type: Number,
-      required: false,
-      default: 30
     }
   }
 }

@@ -1,17 +1,11 @@
 <template>
-  <div class="picture-frame mborder-bottom mborder-top my-8">
+  <div class="border-b border-t">
     <figure>
-      <template v-if="custom">
-        <slot name="customFrame" />
-      </template>
-      <template v-else>
-        <img
-          :src="require(`~/assets/img/${src}`)"
-          :alt="title"
-        >
-      </template>
+      <div class="bg-mdarkone">
+        <slot />
+      </div>
       <figcaption>
-        <h3>{{ title }}</h3>
+        <h3>{{ description }}</h3>
       </figcaption>
     </figure>
   </div>
@@ -21,17 +15,9 @@
 export default {
   name: 'PictureFrame',
   props: {
-    src: {
-      type: String,
-      default: ''
-    },
-    title: {
+    description: {
       type: String,
       required: true
-    },
-    custom: {
-      type: Boolean,
-      default: false
     }
   }
 }
@@ -39,7 +25,7 @@ export default {
 
 <style scoped lang="postcss">
 
-  .picture-frame figcaption{
+  figcaption{
     @apply text-center font-acuminCondensed text-mwhite my-4;
   }
 

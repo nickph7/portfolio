@@ -10,16 +10,13 @@
 import Navbar from '@/components/NavBar'
 import MFooter from '~/components/MFooter'
 export default {
+  name: 'DefaultLayout',
   components: { MFooter, Navbar }
 }
 </script>
 
 <style>
-/* TODO: Better strategy for defining global style */
-  .main-container{
-    margin-top: var(--nav-height-mob);
-    min-height: calc(100vh - var(--nav-height-mob) - 3rem);
-  }
+
 </style>
 
 <style scoped>

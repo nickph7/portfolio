@@ -1,6 +1,6 @@
 <template>
-  <div class="nav-wrapper flex items-center w-full fixed top-0 left-0 bg-mdarktwo text-mwhite z-30">
-    <nav class="nav-main w-full flex flex-row justify-between px-8 max-w-screen-xl mx-auto">
+  <div class="fixed top-0 left-0 z-30 flex items-center w-full nav-wrapper bg-mdarktwo text-mwhite">
+    <nav class="flex flex-row items-center justify-between w-full max-w-screen-xl px-8 mx-auto nav-main">
       <nuxt-link to="/">
         <logo />
       </nuxt-link>

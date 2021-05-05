@@ -1,5 +1,5 @@
 <template>
-  <div class="p-text-box p-4 md:p-8 mx-auto mt-4 mb-6 max-w-4xl">
+  <div class="p-text-box p-4 md:p-8 mx-auto mt-4 mb-6 max-w-3xl">
     <header>
       <slot name="header" />
     </header>

@@ -30,9 +30,9 @@
     <m-vimeo-player :id="386896207" title="Machine to hand with birds Demo" />
     <image-gallery
       id="m4b"
-      class="mborder-top"
-      :src="gallery.src"
-      :alt="gallery.alt"
+      class="border-t"
+      :source="gallery"
+      title="Machine to hang with birds demo"
     />
     <mobile-projects-nav
       :prev="{
@@ -60,22 +60,13 @@ export default {
   layout: 'project',
   data () {
     return {
-      gallery: {
-        src: [
-          'm4b-screenshots/m4b-fullview.jpg',
-          'm4b-screenshots/m4b-bird-playback.jpg',
-          'm4b-screenshots/m4b-steps.jpg',
-          'm4b-screenshots/m4b-synth-fm-patch.jpg',
-          'm4b-screenshots/m4b-synth-interface.jpg'
-        ],
-        alt: [
-          'Full view of the patch',
-          'Picking a random bird soundscape using the dictionary',
-          'Internal logic of the step sequencer',
-          'Partial view of the fm routing of the synth',
-          'Interface of the synth'
-        ]
-      }
+      gallery: [
+        { src: require('~/assets/m4b-screenshots/m4b-fullview.jpg'), alt: 'Full view of the patch' },
+        { src: require('~/assets/m4b-screenshots/m4b-bird-playback.jpg'), alt: 'Picking a random bird soundscape using the dictionary' },
+        { src: require('~/assets/m4b-screenshots/m4b-steps.jpg'), alt: 'Internal logic of the step sequencer' },
+        { src: require('~/assets/m4b-screenshots/m4b-synth-fm-patch.jpg'), alt: 'Partial view of the fm routing of the synth' },
+        { src: require('~/assets/m4b-screenshots/m4b-synth-interface.jpg'), alt: 'Interface of the synth' }
+      ]
     }
   },
   head () {

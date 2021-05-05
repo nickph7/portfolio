@@ -1,19 +1,21 @@
 <template>
-  <div class="bottom-bar bg-mdarktwo w-full flex items-center">
-    <MButton :on-click="toggleSidebar" class="sidebar-button lg:hidden">
-      <i class="icon-up-dir" />
+  <div class="flex items-center w-full bottom-bar bg-mdarktwo">
+    <MButton :on-click="toggleSidebar" class="cursor-pointer sidebar-button lg:hidden" :class="{'sidebar-active' : sidebarIsToggled}">
+      <div class="transition duration-200 transform" :class="{'rotate-90' : sidebarIsToggled}">
+        <i class="icon-up-dir" />
+      </div>
     </MButton>
-    <div class="inline-flex justify-between flex-grow mx-2">
+    <div class="inline-flex justify-between flex-grow mx-2 lg:mx-4">
       <div class="link-wrapper">
         <nuxt-link v-if="hasPrev" :to="prev.link ? prev.link : '/'">
-          <i class="icon-left tiny-arrow" />
-          <span class="font-acuminCondensed uppercase text-mwhite">{{ prev.title }}</span>
+          <i class="icon-left tiny-arrow mr-1" />
+          <span class="uppercase font-acuminCondensed text-mwhite link-text">{{ prev.title }}</span>
         </nuxt-link>
       </div>
       <div class="link-wrapper">
         <nuxt-link v-if="hasNext" :to="next.link ? next.link : '/'">
-          <span class="font-acuminCondensed uppercase text-mwhite">{{ next.title }}</span>
-          <i class="icon-right tiny-arrow" />
+          <span class="uppercase font-acuminCondensed text-mwhite link-text">{{ next.title }}</span>
+          <i class="icon-right tiny-arrow ml-1" />
         </nuxt-link>
       </div>
     </div>
@@ -51,14 +53,13 @@ export default {
     }
   },
   beforeDestroy () {
-    document.getElementById('sidebar').style.display = 'none'
+    this.$nuxt.$emit('close-sidebar')
+    this.sidebarIsToggled = false
   },
   methods: {
     toggleSidebar () {
+      this.$nuxt.$emit('sidebar-toggled')
       this.sidebarIsToggled = !this.sidebarIsToggled
-      // console.log(this.sidebarIsToggled)
-      const sb = document.getElementById('sidebar')
-      this.sidebarIsToggled ? sb.style.display = 'block' : sb.style.display = 'none'
     }
   }
 }
@@ -79,12 +80,12 @@ export default {
     border-right: 1px solid var(--mdarkthree);
   }
 
-  .link-wrapper {
-    /*Hello*/
+  .tiny-arrow{
+    @apply text-xs bg-mwhite rounded-sm;
+    padding: 1px 0;
   }
 
-  .tiny-arrow{
-    @apply text-xs bg-mwhite rounded-sm mr-1;
-    padding: 1px 0;
+  .sidebar-active{
+    @apply bg-mgreytwo text-mdarktwo;
   }
 </style>

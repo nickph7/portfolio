@@ -1,7 +1,13 @@
 <template>
   <div>
     <cover>
-      <img src="~/assets/img/infinite/cover.jpg" alt="In.finite cover">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/infinite/cover.jpg')"
+          :data-loading="require('~/assets/img/infinite/cover.jpg?lqip')"
+          alt="Infinite project cover"
+        >
+      </div>
     </cover>
     <p-text-box>
       <template v-slot:header>
@@ -30,9 +36,9 @@
     </p-text-box>
     <image-gallery
       :id="galleries[0].id"
-      class="mborder-bottom"
-      :src="galleries[0].src"
-      :alt="galleries[0].alt"
+      class="border-b border-t"
+      :source="galleries[0].source"
+      title="Design Mock Ups"
     />
     <p-text-box>
       <p class="text">
@@ -54,14 +60,18 @@
     </p-text-box>
     <image-gallery
       :id="galleries[1].id"
+      class="border-t"
       :custom="true"
       :alt="galleries[1].alt"
+      title="Demo Snapshots"
     >
       <template v-slot:customSlides>
         <!-- eslint-disable-next-line vue/valid-v-for -->
         <swiper-slide v-for="n in 5" :key="n" class="gallery-slide">
           <video autoplay loop muted class="gallery-img">
+            <source :src="require(`~/assets/img/infinite/Infinite${n}.webm`)" type="video/webm">
             <source :src="require(`~/assets/img/infinite/Infinite${n}.mp4`)" type="video/mp4">
+            Your browser does not support the <code>Video</code> Tag :(
           </video>
         </swiper-slide>
       </template>
@@ -80,8 +90,6 @@
 </template>
 
 <script>
-// TODO: Videos are not played on mobile.
-
 import Cover from '~/components/Cover'
 import PTextBox from '~/components/PTextBox'
 import ImageGallery from '~/components/ImageGallery'
@@ -96,15 +104,10 @@ export default {
       galleries: [
         {
           id: 'mockup',
-          src: [
-            'infinite/mockup1.jpg',
-            'infinite/mockup2.jpg',
-            'infinite/mockup3.jpg'
-          ],
-          alt: [
-            'Some Mock ups for the website - project page',
-            'Some Mock ups for the website - project list',
-            'another project page option with split view of process and final'
+          source: [
+            { src: require('~/assets/img/infinite/mockup1.jpg'), alt: 'Mock up for the project page' },
+            { src: require('~/assets/img/infinite/mockup2.jpg'), alt: 'Mock up for the project list' },
+            { src: require('~/assets/img/infinite/mockup3.jpg'), alt: 'another project page option with split view of process and final' }
           ]
         },
         {

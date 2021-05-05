@@ -9,10 +9,13 @@ export default {
 }
 </script>
 <style scoped>
-  /* TODO: Change this so covers always have the same height */
   .cover img {
     height: 70vh;
     object-fit: cover;
     width: 100%;
+  }
+
+  .cover img[lazy='loading'] {
+    filter: blur(5px);
   }
 </style>

@@ -1,9 +1,15 @@
 <template>
   <div class="">
     <cover>
-      <img src="~/assets/img/equilibria/eq-fullview2.jpg">
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-src="require('~/assets/img/equilibria/eq-fullview2.jpg')"
+          :data-loading="require('~/assets/img/equilibria/eq-fullview2.jpg?lqip')"
+          alt="Equilibria project cover"
+        >
+      </div>
     </cover>
-    <p-text-box class="text-box p-4">
+    <p-text-box class="p-4 text-box">
       <template v-slot:header>
         <h1 class="title">
           Equilibria
@@ -24,10 +30,13 @@
         ecosystem and hopes to develop an awareness of their own finite reality.
       </p>
     </p-text-box>
-    <picture-frame
-      src="equilibria/eq-fullview.jpg"
-      title="Full view of the structure"
-    />
+    <picture-frame description="Full view of the structure">
+      <img
+        :src="require('~/assets/img/equilibria/eq-fullview.jpg')"
+        alt="Full view of the structure"
+        class="object-contain py-0 mx-auto max-h-screen-3/4 lg:py-12"
+      >
+    </picture-frame>
     <p-text-box>
       <p class="text">
         For this project, I was tasked to design and build the central structure, and program our interactive branches
@@ -42,28 +51,39 @@
     </p-text-box>
     <image-gallery
       id="youtube-gallery"
-      class="mborder-bottom mborder-top"
+      class="border-t border-b"
       :custom="true"
-      :alt="gallery[1].alt"
+      :alt="youtubeAlts"
+      title="Project Demos"
     >
       <template v-slot:customSlides>
         <swiper-slide class="gallery-slide">
-          <iframe
-            class="gallery-img youtube-iframe"
-            src="https://www.youtube.com/embed/UwcoFXKnpOw"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
+          <div class="inner-wrapper">
+            <div class="youtube-player">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/UwcoFXKnpOw"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+          </div>
         </swiper-slide>
         <swiper-slide class="gallery-slide">
-          <iframe
-            class="gallery-img youtube-iframe"
-            src="https://www.youtube.com/embed/alJGOYO-9xU"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
+          <div class="inner-wrapper">
+            <div class="youtube-player">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/alJGOYO-9xU"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+          </div>
         </swiper-slide>
       </template>
     </image-gallery>
@@ -71,8 +91,8 @@
     <image-gallery
       id="equilibria"
       class=""
-      :src="gallery[0].src"
-      :alt="gallery[0].alt"
+      :source="gallery"
+      title="Process Photos"
     />
     <mobile-projects-nav
       :prev="{
@@ -102,29 +122,15 @@ export default {
   data () {
     return {
       gallery: [
-        {
-          src: [
-            'equilibria/eq-ball.jpg',
-            'equilibria/eq-tree.jpg',
-            'equilibria/eq-water.jpg',
-            'equilibria/eq-light.jpg',
-            'equilibria/eq-structure.jpg'
-          ],
-          alt: [
-            'View of the ball',
-            'Test with vellum paper',
-            'Ink drops in the water',
-            'Programming the lights',
-            'Finishing the structure'
-          ]
-        },
-        // Youtube alts
-        {
-          alt: [
-            'Demonstration of the artwork',
-            'Trailer for the stripped-down version'
-          ]
-        }
+        { src: require('~/assets/img/equilibria/eq-ball.jpg'), alt: 'View of the ball' },
+        { src: require('~/assets/img/equilibria/eq-tree.jpg'), alt: 'Test with vellum paper' },
+        { src: require('~/assets/img/equilibria/eq-water.jpg'), alt: 'Ink drops in the water' },
+        { src: require('~/assets/img/equilibria/eq-light.jpg'), alt: 'Programming the lights' },
+        { src: require('~/assets/img/equilibria/eq-structure.jpg'), alt: 'Finishing the structure' }
+      ],
+      youtubeAlts: [
+        'Demonstration of the artwork',
+        'Trailer for the stripped-down version'
       ]
     }
   },
@@ -137,9 +143,23 @@ export default {
 </script>
 
 <style scoped>
-.youtube-iframe{
+.inner-wrapper{
+  margin: 0 auto;
+  max-width: 120vh;
+  min-height: unset;
+}
+
+.youtube-player{
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.youtube-player iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  /* 100% of container - the height of the title bar */
-  height: calc(100% - 39px);
+  height: 100%;
 }
 </style>

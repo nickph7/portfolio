@@ -35,8 +35,7 @@
 </template>
 <style>
   .logo{
-    height: 25px;
-    width: auto;
+    width: 5rem;
   }
   .cls-1{
     fill: var(--mwhite);
