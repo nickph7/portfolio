@@ -3,7 +3,7 @@
     <navbar />
     <main class="relative flex w-full">
       <responsive-sidebar />
-      <div class="content lg:container" style="min-width: 0 !important;">
+      <div class="content flex-grow" style="min-width: 0 !important;">
         <nuxt />
       </div>
     </main>

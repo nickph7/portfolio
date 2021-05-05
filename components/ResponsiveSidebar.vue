@@ -1,5 +1,5 @@
 <template>
-  <div id="sidebar" class="flex-grow responsive-sidebar-wrapper border-r" :class="opened ? 'w-64' : 'w-0'">
+  <div id="sidebar" class="responsive-sidebar-wrapper border-r" :class="opened ? 'w-64' : 'w-0'">
     <div class="text-center responsive-sidebar lg:flex" :class="opened ? 'flex' : 'hidden'">
       <ul class="text-xl uppercase content-link project-links">
         <li v-for="project in projects" :key="project.link" class="responsive-sidebar--link">
@@ -85,7 +85,7 @@ export default {
       position: relative;
       height: auto;
       align-self: stretch;
-      min-width: 250px;
+      min-width: 16rem;
     }
   }
 </style>

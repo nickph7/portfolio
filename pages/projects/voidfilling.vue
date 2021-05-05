@@ -44,7 +44,7 @@
         state, representing that our attempt to fulfill our need for real
         communication is non-lasting and futile. For this project, we used
         TouchDesigner to create the generative visuals and Python with
-        Twitter's API for collecting social media activity.
+        Twitter's API for collecting and managing social media data.
       </p>
     </p-text-box>
     <m-vimeo-player id="501028450" title="Voidfilling Demo" />

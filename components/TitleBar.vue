@@ -15,6 +15,7 @@ export default {
   padding: 0.125rem;
   padding-left: 0.25rem;
   min-height: 1rem;
+  letter-spacing: 0.03rem;
   background-image: linear-gradient(to right, var(--mdarkone), var(--mdarktwo), var(--mdarkthree), var(--mgreyone));
 }
 

@@ -19,21 +19,21 @@
       </swiper>
     </client-only>
     <!-- NAVI -->
-    <div class="gal-navigation">
+    <div class="gal-navigation w-full flex items-center border-t">
       <div class="gal-controls">
-        <m-button :class="id + 'gallery-swiper-prev'" class="gal-button gal-next" :size="buttonSize">
+        <m-button :class="id + 'gallery-swiper-prev'" class="gal-button gal-next">
           <i class="icon-left-dir" />
         </m-button>
         <div
           :class="id + 'gallery-swiper-fract'"
           class="self-center text-center text-mwhite font-acuminXcondensed"
         />
-        <m-button :class="id + 'gallery-swiper-next'" class="gal-button gal-prev" :size="buttonSize">
+        <m-button :class="id + 'gallery-swiper-next'" class="gal-button gal-prev">
           <i class="icon-right-dir" />
         </m-button>
       </div>
       <div class="self-stretch flex-auto gallery-title text-mwhite font-acuminCondensed bg-mdarktwo">
-        <div class="flex items-center justify-center h-full text-center">
+        <div class="flex items-center justify-center h-full text-center px-1">
           <p class="gallery-title__text">
             {{ custom ? alt[currentIndex] : source[currentIndex].alt }}
           </p>
@@ -168,14 +168,6 @@ export default {
     border-left: 1px solid var(--mdarkthree);
   }
 
-  /* TODO: Improve buttons and controls */
-  .gal-navigation {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-top: 1px solid var(--mdarkthree);
-  }
-
   .gal-controls{
     display: inline-flex;
     background-color: var(--mdarktwo);
@@ -183,9 +175,18 @@ export default {
     width: 140px;
   }
 
+  .gal-button{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   .gallery-title{
     font-size: 0.875rem;
     line-height: 1.2;
+
+    @media(--lg){
+      font-size: 1rem;
+    }
   }
 
   /* Offset text to the middle for auto slide */

@@ -16,6 +16,6 @@ export default {
   }
 
   .cover img[lazy='loading'] {
-    filter: blur(15px);
+    filter: blur(5px);
   }
 </style>

@@ -5,17 +5,17 @@
         <i class="icon-up-dir" />
       </div>
     </MButton>
-    <div class="inline-flex justify-between flex-grow mx-2">
+    <div class="inline-flex justify-between flex-grow mx-2 lg:mx-4">
       <div class="link-wrapper">
         <nuxt-link v-if="hasPrev" :to="prev.link ? prev.link : '/'">
-          <i class="icon-left tiny-arrow" />
-          <span class="uppercase font-acuminCondensed text-mwhite">{{ prev.title }}</span>
+          <i class="icon-left tiny-arrow mr-1" />
+          <span class="uppercase font-acuminCondensed text-mwhite link-text">{{ prev.title }}</span>
         </nuxt-link>
       </div>
       <div class="link-wrapper">
         <nuxt-link v-if="hasNext" :to="next.link ? next.link : '/'">
-          <span class="uppercase font-acuminCondensed text-mwhite">{{ next.title }}</span>
-          <i class="icon-right tiny-arrow" />
+          <span class="uppercase font-acuminCondensed text-mwhite link-text">{{ next.title }}</span>
+          <i class="icon-right tiny-arrow ml-1" />
         </nuxt-link>
       </div>
     </div>
@@ -81,7 +81,7 @@ export default {
   }
 
   .tiny-arrow{
-    @apply text-xs bg-mwhite rounded-sm mr-1;
+    @apply text-xs bg-mwhite rounded-sm;
     padding: 1px 0;
   }
 

@@ -1,6 +1,13 @@
+/* enable postcss dialect */
+@custom-media --sm (min-width: 640px);
+@custom-media --md (min-width: 768px);
+@custom-media --lg (min-width: 1024px);
+@custom-media --xl (min-width: 1280px);
+@custom-media --2xl (min-width: 1536px);
+
 :root{
-  --nav-height-mob: 60px;
-  --bottom-bar-height: 47px;
+  --nav-height-mob: 3.5rem;
+  --bottom-bar-height: 3rem;
   --mdarkone: #181616;
   --mdarktwo: #252424;
   --mdarkthree: #4b4a4a;
@@ -17,7 +24,8 @@
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: geometricPrecision;
+    //text-rendering: geometricPrecision;
+    text-rendering: optimizeLegibility;
   }
 
   body {
@@ -37,6 +45,14 @@
     line-height: 1;
     text-transform: uppercase;
     font-size: 3rem;
+
+    @media (--md){
+      font-size: 3.25rem;
+    }
+
+    @media (--lg){
+      font-size: 3.75rem;
+    }
   }
   .date, .collaborator {
     font-family: acumin-pro-condensed, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -53,7 +69,7 @@
     font-family: acumin-pro, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #dcdada
+    color: #dcdada;
   }
   .content-link {
     font-family: acumin-pro-condensed, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
